@@ -247,7 +247,7 @@ const translations = {
       "Correct: ",
 
     miss:
-      "Miss: ",
+      "Mistakes: ",
 
     guideTitle:
       "How to Practice Typing",

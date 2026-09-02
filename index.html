@@ -1,43 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-adsense-account" content="ca-pub-1666906996789320">
-  <title>タイピング練習</title>
+
+  <title>無料タイピング練習｜初心者向けタイピングゲーム</title>
+
+  <meta name="description" content="無料で楽しめるタイピング練習。日本語、英語などの言語に対応したシンプルなタイピングゲームです。">
+
   <link rel="stylesheet" href="hinomaru.css">
-<!-- Cloudflare Web Analytics -->
-<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c0261c3001bf42dbbbfe229eb3c4c244"}'></script>
-<!-- End Cloudflare Web Analytics -->
 </head>
 
 <body>
 
   <main class="container">
 
-<div class="language-box">
-  <select id="language">
-    <option value="ja">日本語</option>
-    <option value="en">English</option>
-    <option value="zh">中文</option>
-    <option value="es">Español</option>
-    <option value="fr">Français</option>
-    <option value="de">Deutsch</option>
-    <option value="it">Italiano</option>
-    <option value="pt">Português</option>
-  </select>
-</div>
+    <div class="language-box">
+      <select id="language">
+        <option value="ja">日本語</option>
+        <option value="en">English</option>
+        <option value="zh">中文</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="it">Italiano</option>
+        <option value="pt">Português</option>
+      </select>
+    </div>
 
-<h1 id="title">タイピング練習</h1>
 
-<div id="word"></div>
+    <h1 id="title">無料タイピング練習</h1>
 
-<div class="info">
-  <span><span id="correctText">正解：</span><b id="correct">0</b></span>
-  <span><span id="missText">ミス：</span><b id="miss">0</b></span>
-</div>
+
+    <div id="word"></div>
+
+
+    <div class="info">
+      <span>
+        <span id="correctText">正解：</span>
+        <b id="correct">0</b>
+      </span>
+
+      <span>
+        <span id="missText">ミス：</span>
+        <b id="miss">0</b>
+      </span>
+    </div>
+
 
     <div class="keyboard">
 
@@ -78,7 +88,34 @@
 
     </div>
 
+
+    <!-- タイピング練習のやり方 -->
+    <section class="practice-guide">
+
+      <h2>タイピング練習のやり方</h2>
+
+      <p>
+        画面に表示された文字をキーボードで入力してください。
+        正しく入力すると次の文字へ進みます。
+        間違えるとミスとしてカウントされます。
+        楽しみながら繰り返し練習しましょう。
+      </p>
+
+    </section>
+
+
+    <!-- フッター -->
+    <footer class="site-footer">
+
+      <p>Yuusho-DCT Corporation</p>
+
+      <p>所在地：Japan</p>
+
+    </footer>
+
+
   </main>
+
 
   <script src="hinomaru.js"></script>
 

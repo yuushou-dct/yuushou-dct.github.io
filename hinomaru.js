@@ -49,8 +49,6 @@ function updateWord(){
 
     if(i < currentIndex){
 
-      // すでに打った文字
-
       html +=
         `<span class="typed">${currentWord[i]}</span>`;
 
@@ -58,16 +56,12 @@ function updateWord(){
 
     else if(i === currentIndex){
 
-      // 今から打つ文字
-
       html +=
         `<span class="current">${currentWord[i]}</span>`;
 
     }
 
     else{
-
-      // まだ打っていない文字
 
       html +=
         `<span class="remaining">${currentWord[i]}</span>`;
@@ -159,8 +153,6 @@ document.addEventListener("keydown", function(event){
 
     updateWord();
 
-
-    // 単語を全部入力
 
     if(currentIndex >= currentWord.length){
 

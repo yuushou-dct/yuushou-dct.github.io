@@ -1,4 +1,3 @@
-
 *{
   box-sizing:border-box;
 }
@@ -8,7 +7,7 @@ body{
   min-height:100vh;
   display:flex;
   justify-content:center;
-  align-items:center;
+  align-items:flex-start;
   background:#0f0f12;
   color:#e9eef5;
   font-family:Arial,sans-serif;
@@ -17,6 +16,7 @@ body{
 .container{
   width:700px;
   text-align:center;
+  padding:40px 0;
 }
 
 h1{
@@ -100,4 +100,44 @@ h1{
   border:1px solid #3a3a45;
   border-radius:6px;
   font-size:14px;
+}
+
+
+/* タイピング練習のやり方 */
+
+.practice-guide{
+  margin-top:50px;
+  padding:25px;
+  background:#16161c;
+  border:1px solid #3a3a45;
+  border-radius:10px;
+  text-align:left;
+}
+
+.practice-guide h2{
+  margin-top:0;
+  margin-bottom:15px;
+  font-size:24px;
+}
+
+.practice-guide p{
+  margin:0;
+  line-height:1.8;
+  color:#cfd6e0;
+}
+
+
+/* フッター */
+
+.site-footer{
+  margin-top:40px;
+  padding:25px 0;
+  border-top:1px solid #3a3a45;
+  color:#9aa3af;
+  font-size:14px;
+  line-height:1.8;
+}
+
+.site-footer p{
+  margin:5px 0;
 }

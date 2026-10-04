@@ -1,4 +1,3 @@
-```js
 const words = [
 
   "apple",
@@ -236,21 +235,43 @@ document.addEventListener(
 
 
 
+// 言語ページ
+
+const languageUrls = {
+
+  en: "/",
+
+  ja: "/ja/",
+
+  zh: "/zh/",
+
+  es: "/es/",
+
+  fr: "/fr/",
+
+  de: "/de/",
+
+  it: "/it/",
+
+  pt: "/pt/"
+
+};
+
+
+
 // 言語変更
 
 language.addEventListener(
   "change",
   function(){
 
-    if(this.value === "ja"){
+    const url =
+      languageUrls[this.value];
 
-      window.location.href = "/";
 
-    }
+    if(url){
 
-    else if(this.value === "en"){
-
-      window.location.href = "/en/";
+      window.location.href = url;
 
     }
 
@@ -277,4 +298,3 @@ if(currentLanguage){
 // 最初の単語
 
 nextWord();
-```

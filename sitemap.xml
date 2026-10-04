@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+
+  <!-- English -->
+
+  <url>
+
+    <loc>https://yuushou-dct.github.io/</loc>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://yuushou-dct.github.io/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="ja"
+      href="https://yuushou-dct.github.io/ja/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="zh-Hans"
+      href="https://yuushou-dct.github.io/zh/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="es"
+      href="https://yuushou-dct.github.io/es/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="fr"
+      href="https://yuushou-dct.github.io/fr/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="de"
+      href="https://yuushou-dct.github.io/de/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="it"
+      href="https://yuushou-dct.github.io/it/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="pt"
+      href="https://yuushou-dct.github.io/pt/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://yuushou-dct.github.io/"/>
+
+  </url>
+
+
+  <!-- Japanese -->
+
+  <url>
+
+    <loc>https://yuushou-dct.github.io/ja/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en"
+      href="https://yuushou-dct.github.io/"/>
+
+    <xhtml:link rel="alternate" hreflang="ja"
+      href="https://yuushou-dct.github.io/ja/"/>
+
+    <xhtml:link rel="alternate" hreflang="zh-Hans"
+      href="https://yuushou-dct.github.io/zh/"/>
+
+    <xhtml:link rel="alternate" hreflang="es"
+      href="https://yuushou-dct.github.io/es/"/>
+
+    <xhtml:link rel="alternate" hreflang="fr"
+      href="https://yuushou-dct.github.io/fr/"/>
+
+    <xhtml:link rel="alternate" hreflang="de"
+      href="https://yuushou-dct.github.io/de/"/>
+
+    <xhtml:link rel="alternate" hreflang="it"
+      href="https://yuushou-dct.github.io/it/"/>
+
+    <xhtml:link rel="alternate" hreflang="pt"
+      href="https://yuushou-dct.github.io/pt/"/>
+
+    <xhtml:link rel="alternate" hreflang="x-default"
+      href="https://yuushou-dct.github.io/"/>
+
+  </url>
+
+
+  <!-- Chinese -->
+
+  <url>
+
+    <loc>https://yuushou-dct.github.io/zh/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuushou-dct.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yuushou-dct.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yuushou-dct.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yuushou-dct.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yuushou-dct.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yuushou-dct.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yuushou-dct.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yuushou-dct.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuushou-dct.github.io/"/>
+
+  </url>
+
+
+  <!-- Spanish -->
+
+  <url>
+
+    <loc>https://yuushou-dct.github.io/es/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuushou-dct.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yuushou-dct.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yuushou-dct.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yuushou-dct.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yuushou-dct.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yuushou-dct.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yuushou-dct.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yuushou-dct.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuushou-dct.github.io/"/>
+
+  </url>
+
+
+  <!-- French -->
+
+  <url>
+
+    <loc>https://yuushou-dct.github.io/fr/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuushou-dct.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yuushou-dct.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yuushou-dct.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yuushou-dct.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yuushou-dct.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yuushou-dct.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yuushou-dct.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yuushou-dct.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuushou-dct.github.io/"/>
+
+  </url>
+
+
+  <!-- German -->
+
+  <url>
+
+    <loc>https://yuushou-dct.github.io/de/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuushou-dct.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yuushou-dct.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yuushou-dct.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yuushou-dct.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yuushou-dct.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yuushou-dct.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yuushou-dct.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yuushou-dct.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuushou-dct.github.io/"/>
+
+  </url>
+
+
+  <!-- Italian -->
+
+  <url>
+
+    <loc>https://yuushou-dct.github.io/it/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuushou-dct.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yuushou-dct.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yuushou-dct.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yuushou-dct.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yuushou-dct.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yuushou-dct.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yuushou-dct.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yuushou-dct.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuushou-dct.github.io/"/>
+
+  </url>
+
+
+  <!-- Portuguese -->
+
+  <url>
+
+    <loc>https://yuushou-dct.github.io/pt/</loc>
+
+    <xhtml:link rel="alternate" hreflang="en" href="https://yuushou-dct.github.io/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://yuushou-dct.github.io/ja/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://yuushou-dct.github.io/zh/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://yuushou-dct.github.io/es/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://yuushou-dct.github.io/fr/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://yuushou-dct.github.io/de/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://yuushou-dct.github.io/it/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://yuushou-dct.github.io/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://yuushou-dct.github.io/"/>
+
+  </url>
+
+
+</urlset>

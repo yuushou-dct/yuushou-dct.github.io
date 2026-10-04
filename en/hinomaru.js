@@ -236,43 +236,21 @@ document.addEventListener(
 
 
 
-// 言語ページ
-
-const languageUrls = {
-
-  ja: "/",
-
-  en: "/en/",
-
-  zh: "/zh/",
-
-  es: "/es/",
-
-  fr: "/fr/",
-
-  de: "/de/",
-
-  it: "/it/",
-
-  pt: "/pt/"
-
-};
-
-
-
 // 言語変更
 
 language.addEventListener(
   "change",
   function(){
 
-    const url =
-      languageUrls[this.value];
+    if(this.value === "ja"){
 
+      window.location.href = "/";
 
-    if(url){
+    }
 
-      window.location.href = url;
+    else if(this.value === "en"){
+
+      window.location.href = "/en/";
 
     }
 

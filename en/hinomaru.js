@@ -1,3 +1,4 @@
+```js
 const words = [
 
   "apple",
@@ -239,9 +240,9 @@ document.addEventListener(
 
 const languageUrls = {
 
-  en: "/",
+  ja: "/",
 
-  ja: "/ja/",
+  en: "/en/",
 
   zh: "/zh/",
 
@@ -298,3 +299,4 @@ if(currentLanguage){
 // 最初の単語
 
 nextWord();
+```

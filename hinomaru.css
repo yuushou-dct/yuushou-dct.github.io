@@ -158,3 +158,18 @@ footer{
 
   line-height:1.6;
 }
+.setsuna-link{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  color:#fff;
+  background:#1763dc;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.setsuna-link:hover{
+  background:#438eff;
+}
+

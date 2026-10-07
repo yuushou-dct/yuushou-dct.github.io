@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <title>TAI-SETSUNA-瞬｜無料タイピング速度ゲーム</title>
+
+  <meta name="description"
+        content="TAI-SETSUNA-瞬。タイピング速度をkm/hで競う完全無料タイピングゲーム。">
+
+  <link rel="stylesheet"
+        href="taisetsuna.css">
+
+</head>
+
+
+<body>
+
+
+<div class="game-layout">
+
+
+  <!-- =========================
+       左・縦長パチスロ液晶
+  ========================== -->
+
+  <aside class="slot-monitor">
+
+    <div class="slot-frame">
+
+      <div id="leftScreen"
+           class="slot-screen">
+
+
+        <!-- 待機画面 -->
+
+        <div class="standby">
+
+          <div class="slot-logo">
+            TAI-SETSUNA
+          </div>
+
+
+          <div class="push">
+            PUSH START
+          </div>
+
+
+          <div class="or">
+            or
+          </div>
+
+
+          <div class="enter">
+            ENTER
+          </div>
+
+
+          <div class="free">
+            ★ 完全無料 ★
+          </div>
+
+
+          <div class="howto">
+
+            <p>
+              出た文字をタイピングし、
+            </p>
+
+            <p>
+              そのスピードを競う
+              ゲームです。
+            </p>
+
+            <div class="virtual">
+              1文字 ＝ 仮想1m
+            </div>
+
+          </div>
+
+
+          <div class="producer">
+
+            製作<br>
+
+            yuushou-dct-corporation<br>
+
+            Japan
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </aside>
+
+
+
+  <!-- =========================
+       中央ゲーム
+  ========================== -->
+
+  <main class="game-main">
+
+
+    <!-- タイトル -->
+
+    <div class="title-area">
+
+      <h1>
+        TAI-SETSUNA-瞬
+      </h1>
+
+      <span class="title-lightning"></span>
+
+    </div>
+
+
+
+    <p class="catch-copy">
+
+      速度を制す者は
+      タイピングを制す‼
+
+    </p>
+
+
+
+    <!-- =====================
+         SPEED
+    ====================== -->
+
+    <section class="speed-area">
+
+
+      <div class="speed-main">
+
+        <span id="speed">
+          0
+        </span>
+
+
+        <span class="kmh">
+          km/h
+        </span>
+
+      </div>
+
+
+
+      <div class="speed-divider">
+      </div>
+
+
+
+      <div class="mph-main">
+
+        <span id="mph">
+          0
+        </span>
+
+
+        <span class="mph-unit">
+          mph
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =====================
+         TARGET
+    ====================== -->
+
+    <section class="target-panel">
+
+
+      <div class="target-label">
+        TARGET
+      </div>
+
+
+      <div id="word">
+        READY
+      </div>
+
+
+      <input
+        id="typingInput"
+        type="text"
+        placeholder="ここに入力"
+        autocomplete="off"
+        spellcheck="false"
+        disabled
+      >
+
+
+    </section>
+
+
+
+    <!-- =====================
+         RESULT
+    ====================== -->
+
+    <section class="result-panel">
+
+
+      <div class="result-item">
+
+        <div class="result-label">
+          正解
+        </div>
+
+        <div
+          id="correct"
+          class="correct-number">
+          0
+        </div>
+
+      </div>
+
+
+
+      <div class="result-line">
+      </div>
+
+
+
+      <div class="result-item">
+
+        <div class="result-label">
+          ミス
+        </div>
+
+        <div
+          id="miss"
+          class="miss-number">
+          0
+        </div>
+
+      </div>
+
+
+
+      <div class="result-line">
+      </div>
+
+
+
+      <div class="result-item">
+
+        <div class="result-label">
+          最高速度
+        </div>
+
+        <div class="best-wrap">
+
+          <span
+            id="bestSpeed"
+            class="best-number">
+            0
+          </span>
+
+          <span class="best-unit">
+            km/h
+          </span>
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- START -->
+
+    <button id="startBtn">
+      START
+    </button>
+
+
+
+    <p class="bottom-message">
+
+      一瞬の判断・正確な入力<br>
+
+      直感を信じられるか？
+
+    </p>
+
+
+  </main>
+
+
+</div>
+
+
+
+<script src="taisetsuna.js"></script>
+
+
+</body>
+
+</html>

@@ -159,26 +159,27 @@ footer{
   line-height:1.6;
 }
 
+
 .setsuna-link{
   position:fixed;
   top:10px;
   left:10px;
-  z-index:9999;
+  z-index:2147483647;
 
-  display:inline-block;
-
-  padding:8px 12px;
+  padding:8px 14px;
 
   color:#fff;
   background:#1763dc;
 
+  border:1px solid #69baff;
   border-radius:7px;
 
-  text-decoration:none;
-  font-weight:bold;
   font-size:14px;
+  font-weight:bold;
 
   cursor:pointer;
+
+  pointer-events:auto;
 }
 
 .setsuna-link:hover{

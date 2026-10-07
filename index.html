@@ -55,18 +55,33 @@
 
     <div class="language-box">
 
-      <select id="language">
+      <select id="language"
+  onchange="
+    event.stopImmediatePropagation();
+    const pages = {
+      en: 'https://yuushou-dct.github.io/',
+      ja: 'https://yuushou-dct.github.io/ja/',
+      zh: 'https://yuushou-dct.github.io/zh/',
+      es: 'https://yuushou-dct.github.io/es/',
+      fr: 'https://yuushou-dct.github.io/fr/',
+      de: 'https://yuushou-dct.github.io/de/',
+      it: 'https://yuushou-dct.github.io/it/',
+      pt: 'https://yuushou-dct.github.io/pt/'
+    };
+    window.location.href = pages[this.value];
+  "
+>
 
-        <option value="en">English</option>
-        <option value="ja" selected>日本語</option>
-        <option value="zh">中文</option>
-        <option value="es">Español</option>
-        <option value="fr">Français</option>
-        <option value="de">Deutsch</option>
-        <option value="it">Italiano</option>
-        <option value="pt">Português</option>
+  <option value="en">English</option>
+  <option value="ja" selected>日本語</option>
+  <option value="zh">中文</option>
+  <option value="es">Español</option>
+  <option value="fr">Français</option>
+  <option value="de">Deutsch</option>
+  <option value="it">Italiano</option>
+  <option value="pt">Português</option>
 
-      </select>
+</select>
 
     </div>
 

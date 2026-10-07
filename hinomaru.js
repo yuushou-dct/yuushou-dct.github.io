@@ -239,22 +239,14 @@ document.addEventListener(
 
 const languageUrls = {
 
-  en: "/",
-
-  ja: "/ja/",
-
-  zh: "/zh/",
-
-  es: "/es/",
-
-  fr: "/fr/",
-
-  de: "/de/",
-
-  it: "/it/",
-
-  pt: "/pt/"
-
+  en: "/en/",
+    ja: "/",
+    zh: "/zh/",
+    es: "/es/",
+    fr: "/fr/",
+    de: "/de/",
+    it: "/it/",
+    pt: "/pt/"
 };
 
 

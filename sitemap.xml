@@ -1,41 +1,105 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+
+  <!-- Typing Practice English -->
 
   <url>
+
     <loc>https://yuushou-dct.github.io/</loc>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://yuushou-dct.github.io/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="ja"
+      href="https://yuushou-dct.github.io/ja/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://yuushou-dct.github.io/"/>
+
   </url>
 
+
+  <!-- Typing Practice Japanese -->
+
   <url>
+
     <loc>https://yuushou-dct.github.io/ja/</loc>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://yuushou-dct.github.io/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="ja"
+      href="https://yuushou-dct.github.io/ja/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://yuushou-dct.github.io/"/>
+
   </url>
 
-  <url>
-    <loc>https://yuushou-dct.github.io/zh/</loc>
-  </url>
+
+  <!-- TAI-SETSUNA Japanese -->
 
   <url>
-    <loc>https://yuushou-dct.github.io/es/</loc>
-  </url>
 
-  <url>
-    <loc>https://yuushou-dct.github.io/fr/</loc>
-  </url>
-
-  <url>
-    <loc>https://yuushou-dct.github.io/de/</loc>
-  </url>
-
-  <url>
-    <loc>https://yuushou-dct.github.io/it/</loc>
-  </url>
-
-  <url>
-    <loc>https://yuushou-dct.github.io/pt/</loc>
-  </url>
-
-  <url>
     <loc>https://yuushou-dct.github.io/tai-setsuna/</loc>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="ja"
+      href="https://yuushou-dct.github.io/tai-setsuna/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://yuushou-dct.github.io/en/tai-setsuna/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://yuushou-dct.github.io/en/tai-setsuna/"/>
+
   </url>
+
+
+  <!-- TAI-SETSUNA English -->
+
+  <url>
+
+    <loc>https://yuushou-dct.github.io/en/tai-setsuna/</loc>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="ja"
+      href="https://yuushou-dct.github.io/tai-setsuna/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://yuushou-dct.github.io/en/tai-setsuna/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://yuushou-dct.github.io/en/tai-setsuna/"/>
+
+  </url>
+
 
 </urlset>

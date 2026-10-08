@@ -1,0 +1,1365 @@
+/* =================================
+   基本
+================================= */
+
+*{
+  box-sizing:border-box;
+}
+
+
+html,
+body{
+  min-height:100%;
+}
+
+
+body{
+
+  margin:0;
+
+  min-height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:15px;
+
+  background:
+
+    radial-gradient(
+      circle at 55% 20%,
+      #13243a 0%,
+      #080e18 48%,
+      #020407 100%
+    );
+
+  color:#ffffff;
+
+  font-family:
+    Arial,
+    "Noto Sans JP",
+    sans-serif;
+
+}
+
+
+
+/* =================================
+   全体レイアウト
+================================= */
+
+.game-layout{
+
+  width:100%;
+
+  max-width:1000px;
+
+  display:grid;
+
+  grid-template-columns:
+    260px
+    560px;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:35px;
+
+}
+
+
+
+/* =================================
+   左パチスロ液晶・外枠
+================================= */
+
+.slot-monitor{
+
+  width:260px;
+
+  height:560px;
+
+  padding:8px;
+
+  border-radius:28px;
+
+  background:
+
+    linear-gradient(
+      145deg,
+      #657080,
+      #151a22 25%,
+      #05080d 65%,
+      #414b59
+    );
+
+  border:3px solid #687484;
+
+  box-shadow:
+
+    0 0 0 3px #080b10,
+
+    0 0 25px rgba(0,120,255,.30),
+
+    inset 0 0 15px rgba(255,255,255,.15);
+
+}
+
+
+
+/* 内側フレーム */
+
+.slot-frame{
+
+  width:100%;
+
+  height:100%;
+
+  padding:10px;
+
+  border-radius:21px;
+
+  background:#030609;
+
+  border:2px solid #1c2633;
+
+  box-shadow:
+
+    inset 0 0 20px #000;
+
+}
+
+
+
+/* =================================
+   液晶
+================================= */
+
+.slot-screen{
+
+  position:relative;
+
+  width:100%;
+
+  height:100%;
+
+  overflow:hidden;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  text-align:center;
+
+  border-radius:15px;
+
+  border:2px solid #247bd0;
+
+  background:
+
+    radial-gradient(
+      circle at 50% 40%,
+      #153a5d,
+      #071421 55%,
+      #02070c
+    );
+
+  box-shadow:
+
+    inset 0 0 35px rgba(0,100,255,.20),
+
+    0 0 10px rgba(0,100,255,.35);
+
+}
+
+
+
+/* 液晶の横線 */
+
+.slot-screen::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  pointer-events:none;
+
+  opacity:.12;
+
+  background:
+
+    repeating-linear-gradient(
+
+      0deg,
+
+      transparent 0,
+
+      transparent 3px,
+
+      #ffffff 4px
+
+    );
+
+}
+
+
+
+/* =================================
+   待機画面
+================================= */
+
+.standby{
+
+  position:relative;
+
+  z-index:2;
+
+  width:100%;
+
+  padding:14px;
+
+}
+
+
+.slot-logo{
+
+  margin-bottom:45px;
+
+  color:#6bbdff;
+
+  font-size:13px;
+
+  font-weight:bold;
+
+  letter-spacing:3px;
+
+}
+
+
+.push{
+
+  color:#ffffff;
+
+  font-size:24px;
+
+  font-weight:900;
+
+  letter-spacing:2px;
+
+  text-shadow:
+    0 0 10px #288cff;
+
+  animation:
+    blink 1s infinite;
+
+}
+
+
+.or{
+
+  margin:8px 0;
+
+  color:#74849a;
+
+  font-size:13px;
+
+}
+
+
+.enter{
+
+  color:#59bdff;
+
+  font-size:25px;
+
+  font-weight:900;
+
+  letter-spacing:4px;
+
+  text-shadow:
+    0 0 10px #168cff;
+
+  animation:
+    blink 1s infinite;
+
+}
+
+
+.free{
+
+  margin-top:28px;
+
+  color:#ffd74f;
+
+  font-size:17px;
+
+  font-weight:bold;
+
+  text-shadow:
+    0 0 8px rgba(255,200,0,.5);
+
+}
+
+
+.howto{
+
+  margin-top:25px;
+
+  color:#c1ccda;
+
+  font-size:12px;
+
+  line-height:1.7;
+
+}
+
+
+.howto p{
+
+  margin:5px 0;
+
+}
+
+
+.virtual{
+
+  margin-top:13px;
+
+  padding:7px;
+
+  color:#ffd969;
+
+  border-top:1px solid #304b69;
+
+  border-bottom:1px solid #304b69;
+
+}
+
+
+.producer{
+
+  margin-top:25px;
+
+  color:#748399;
+
+  font-size:10px;
+
+  line-height:1.6;
+
+  letter-spacing:1px;
+
+}
+
+
+@keyframes blink{
+
+  0%,
+  100%{
+    opacity:1;
+  }
+
+  50%{
+    opacity:.25;
+  }
+
+}
+
+
+
+/* =================================
+   中央ゲーム
+================================= */
+
+.game-main{
+
+  width:560px;
+
+  text-align:center;
+
+}
+
+
+
+/* =================================
+   タイトル
+================================= */
+
+.title-area{
+
+  position:relative;
+
+  display:inline-block;
+
+}
+
+
+h1{
+
+  position:relative;
+
+  z-index:2;
+
+  margin:0;
+
+  font-size:46px;
+
+  line-height:1;
+
+  font-weight:900;
+
+  font-style:italic;
+
+  letter-spacing:1px;
+
+  color:#f4f7fb;
+
+  text-shadow:
+
+    0 2px 0 #737d8b,
+
+    0 0 10px rgba(255,255,255,.25);
+
+}
+
+
+
+/* タイトルを横切る雷 */
+
+.title-lightning{
+
+  position:absolute;
+
+  z-index:3;
+
+  top:45%;
+
+  left:2%;
+
+  width:96%;
+
+  height:5px;
+
+  transform:
+    rotate(-9deg);
+
+  background:#ffc72f;
+
+  box-shadow:
+
+    0 0 5px #ffe16a,
+
+    0 0 14px #ff9d00,
+
+    0 0 25px rgba(255,150,0,.5);
+
+  clip-path:polygon(
+
+    0 40%,
+
+    16% 0,
+
+    31% 55%,
+
+    50% 5%,
+
+    68% 60%,
+
+    83% 10%,
+
+    100% 50%,
+
+    82% 90%,
+
+    66% 45%,
+
+    50% 95%,
+
+    30% 40%,
+
+    15% 100%
+
+  );
+
+}
+
+
+
+/* =================================
+   キャッチコピー
+================================= */
+
+.catch-copy{
+
+  margin:8px 0 10px;
+
+  color:#ffd767;
+
+  font-size:14px;
+
+  font-weight:bold;
+
+  letter-spacing:2px;
+
+}
+
+
+
+/* =================================
+   SPEED
+================================= */
+
+.speed-area{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:18px;
+
+  margin:4px 0 12px;
+
+}
+
+
+.speed-main{
+
+  display:flex;
+
+  align-items:baseline;
+
+}
+
+
+#speed{
+
+  color:#d2edff;
+
+  font-size:63px;
+
+  line-height:1;
+
+  font-weight:900;
+
+  font-style:italic;
+
+  text-shadow:
+
+    0 0 8px #268cff,
+
+    0 0 18px rgba(38,140,255,.7);
+
+}
+
+
+.kmh{
+
+  margin-left:7px;
+
+  font-size:23px;
+
+  font-weight:bold;
+
+}
+
+
+.speed-divider{
+
+  width:1px;
+
+  height:44px;
+
+  background:#3c4d65;
+
+}
+
+
+.mph-main{
+
+  display:flex;
+
+  align-items:baseline;
+
+}
+
+
+#mph{
+
+  font-size:29px;
+
+  font-weight:bold;
+
+}
+
+
+.mph-unit{
+
+  margin-left:5px;
+
+  color:#a9b5c6;
+
+  font-size:15px;
+
+}
+
+
+
+/* =================================
+   TARGET
+   タイトル幅くらいに縮小
+================================= */
+
+.target-panel{
+
+  width:470px;
+
+  margin:0 auto;
+
+  padding:12px 22px 14px;
+
+  border:1px solid #315e91;
+
+  border-radius:12px;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      #13243a,
+      #091321
+    );
+
+  box-shadow:
+
+    inset 0 0 20px rgba(30,100,190,.08);
+
+}
+
+
+.target-label{
+
+  text-align:left;
+
+  color:#9caabc;
+
+  font-size:10px;
+
+  letter-spacing:5px;
+
+}
+
+
+#word{
+
+  margin:2px 0 8px;
+
+  font-size:34px;
+
+  line-height:1.1;
+
+  font-weight:bold;
+
+}
+
+
+#typingInput{
+
+  width:92%;
+
+  height:42px;
+
+  padding:7px 12px;
+
+  background:#050a12;
+
+  color:#ffffff;
+
+  border:2px solid #377cff;
+
+  border-radius:8px;
+
+  outline:none;
+
+  text-align:center;
+
+  font-size:18px;
+
+  box-shadow:
+    0 0 7px rgba(55,124,255,.45);
+
+}
+
+
+#typingInput:focus{
+
+  border-color:#6bc4ff;
+
+}
+
+
+
+/* =================================
+   正解・ミス・最高速度
+   TARGETと同じ幅
+================================= */
+
+.result-panel{
+
+  width:470px;
+
+  min-height:57px;
+
+  margin:8px auto 0;
+
+  padding:6px 12px;
+
+  display:flex;
+
+  justify-content:space-around;
+
+  align-items:center;
+
+  border:1px solid #294667;
+
+  border-radius:11px;
+
+  background:#0b1523;
+
+}
+
+
+.result-item{
+
+  flex:1;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  gap:8px;
+
+}
+
+
+.result-label{
+
+  color:#e4e8ef;
+
+  font-size:12px;
+
+  font-weight:bold;
+
+}
+
+
+.correct-number{
+
+  color:#438eff;
+
+  font-size:27px;
+
+  font-weight:900;
+
+}
+
+
+.miss-number{
+
+  color:#ff5265;
+
+  font-size:27px;
+
+  font-weight:900;
+
+}
+
+
+.best-wrap{
+
+  display:flex;
+
+  align-items:baseline;
+
+  gap:4px;
+
+}
+
+
+.best-number{
+
+  color:#ffd54d;
+
+  font-size:27px;
+
+  font-weight:900;
+
+}
+
+
+.best-unit{
+
+  color:#c7ced8;
+
+  font-size:10px;
+
+}
+
+
+.result-line{
+
+  width:1px;
+
+  height:32px;
+
+  background:#34455d;
+
+}
+
+
+
+/* =================================
+   START
+================================= */
+
+#startBtn{
+
+  margin-top:10px;
+
+  padding:9px 45px;
+
+  color:#ffffff;
+
+  background:
+
+    linear-gradient(
+      #438eff,
+      #1763dc
+    );
+
+  border:1px solid #70c5ff;
+
+  border-radius:9px;
+
+  font-size:17px;
+
+  font-weight:900;
+
+  letter-spacing:5px;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 0 12px rgba(40,130,255,.5);
+
+}
+
+
+#startBtn:hover{
+
+  background:
+
+    linear-gradient(
+      #5aa0ff,
+      #2475ed
+    );
+
+}
+
+
+.bottom-message{
+
+  margin:8px 0 0;
+
+  color:#98a6b8;
+
+  font-size:11px;
+
+  line-height:1.5;
+
+  letter-spacing:2px;
+
+}
+
+
+
+/* =================================
+   液晶レベル表示
+================================= */
+
+.level-display{
+
+  position:relative;
+
+  z-index:2;
+
+  width:100%;
+
+  height:100%;
+
+  overflow:hidden;
+
+}
+
+
+.level-title{
+
+  position:absolute;
+
+  z-index:10;
+
+  top:25px;
+
+  left:0;
+
+  width:100%;
+
+  padding:0 5px;
+
+  color:#ffffff;
+
+  font-size:19px;
+
+  font-weight:900;
+
+  letter-spacing:1px;
+
+  text-shadow:
+    0 0 9px #168cff;
+
+}
+
+
+.level-speed{
+
+  position:absolute;
+
+  z-index:10;
+
+  bottom:30px;
+
+  left:0;
+
+  width:100%;
+
+  color:#ffd64e;
+
+  font-size:25px;
+
+  font-weight:900;
+
+  text-shadow:
+    0 0 8px rgba(255,180,0,.5);
+
+}
+
+
+
+/* =================================
+   キャラクター
+================================= */
+
+.runner{
+
+  position:absolute;
+
+  z-index:5;
+
+  top:42%;
+
+  left:-100px;
+
+  font-size:70px;
+
+  animation:
+    moveAcross 2.3s linear infinite;
+
+}
+
+
+@keyframes moveAcross{
+
+  from{
+    left:-100px;
+  }
+
+  to{
+    left:110%;
+  }
+
+}
+
+
+
+/* =================================
+   赤ちゃんハイハイ
+================================= */
+
+.baby{
+
+  animation-name:
+    babyMove,
+    babyBounce;
+
+  animation-timing-function:
+    linear,
+    ease-in-out;
+
+  animation-iteration-count:
+    infinite,
+    infinite;
+
+  animation-direction:
+    normal,
+    alternate;
+
+}
+
+
+@keyframes babyMove{
+
+  from{
+    left:-100px;
+  }
+
+  to{
+    left:110%;
+  }
+
+}
+
+
+@keyframes babyBounce{
+
+  from{
+    transform:
+      translateY(0)
+      rotate(-3deg);
+  }
+
+  to{
+    transform:
+      translateY(-10px)
+      rotate(3deg);
+  }
+
+}
+
+
+
+/* =================================
+   スピード線
+================================= */
+
+.speed-lines{
+
+  position:absolute;
+
+  inset:0;
+
+  opacity:.35;
+
+  background:
+
+    repeating-linear-gradient(
+
+      170deg,
+
+      transparent 0,
+
+      transparent 18px,
+
+      rgba(255,255,255,.25) 20px,
+
+      transparent 23px
+
+    );
+
+  animation:
+    lines .3s linear infinite;
+
+}
+
+
+@keyframes lines{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-60px);
+  }
+
+}
+
+
+
+/* =================================
+   フラッシュ
+================================= */
+
+.flash{
+
+  animation:
+    flashScreen .3s ease 2;
+
+}
+
+
+@keyframes flashScreen{
+
+  0%{
+    filter:brightness(1);
+  }
+
+  50%{
+    filter:brightness(3);
+  }
+
+  100%{
+    filter:brightness(1);
+  }
+
+}
+
+
+
+/* =================================
+   NEW RECORD
+================================= */
+
+.new-record{
+
+  position:absolute;
+
+  z-index:20;
+
+  top:48%;
+
+  left:50%;
+
+  width:100%;
+
+  color:#ffdc45;
+
+  font-size:24px;
+
+  font-weight:900;
+
+  text-shadow:
+
+    0 0 8px #ff7200,
+
+    0 0 20px #ff0000;
+
+  animation:
+    record .45s ease 3;
+
+}
+
+
+@keyframes record{
+
+  0%{
+
+    transform:
+      translate(-50%,-50%)
+      rotate(-8deg)
+      scale(.5);
+
+  }
+
+
+  50%{
+
+    transform:
+      translate(-50%,-50%)
+      rotate(-8deg)
+      scale(1.25);
+
+  }
+
+
+  100%{
+
+    transform:
+      translate(-50%,-50%)
+      rotate(-8deg)
+      scale(1);
+
+  }
+
+}
+
+
+
+/* =================================
+   タブレット
+================================= */
+
+@media(max-width:900px){
+
+  .game-layout{
+
+    grid-template-columns:
+      210px
+      520px;
+
+    gap:20px;
+
+  }
+
+
+  .slot-monitor{
+
+    width:210px;
+
+    height:500px;
+
+  }
+
+
+  .game-main{
+
+    width:520px;
+
+  }
+
+}
+
+
+
+/* =================================
+   スマートフォン
+================================= */
+
+@media(max-width:760px){
+
+  body{
+
+    display:block;
+
+    padding:10px;
+
+  }
+
+
+  .game-layout{
+
+    display:flex;
+
+    flex-direction:column;
+
+    width:100%;
+
+  }
+
+
+  .game-main{
+
+    order:1;
+
+    width:100%;
+
+  }
+
+
+  .slot-monitor{
+
+    order:2;
+
+    width:260px;
+
+    height:390px;
+
+    margin:15px auto 0;
+
+  }
+
+
+  h1{
+
+    font-size:30px;
+
+  }
+
+
+  .catch-copy{
+
+    font-size:11px;
+
+  }
+
+
+  #speed{
+
+    font-size:48px;
+
+  }
+
+
+  .kmh{
+
+    font-size:18px;
+
+  }
+
+
+  #mph{
+
+    font-size:23px;
+
+  }
+
+
+  .target-panel,
+  .result-panel{
+
+    width:100%;
+
+    max-width:470px;
+
+  }
+
+
+  #word{
+
+    font-size:29px;
+
+  }
+
+
+  #typingInput{
+
+    width:100%;
+
+  }
+
+
+  .result-label{
+
+    font-size:10px;
+
+  }
+
+
+  .correct-number,
+  .miss-number,
+  .best-number{
+
+    font-size:22px;
+
+  }
+
+}

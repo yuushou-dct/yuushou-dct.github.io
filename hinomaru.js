@@ -235,42 +235,6 @@ document.addEventListener(
 
 
 
-// 言語ページ
-
-const languageUrls = {
-
-  en: "/en/",
-    ja: "/",
-    zh: "/zh/",
-    es: "/es/",
-    fr: "/fr/",
-    de: "/de/",
-    it: "/it/",
-    pt: "/pt/"
-};
-
-
-
-// 言語変更
-
-language.addEventListener(
-  "change",
-  function(){
-
-    const url =
-      languageUrls[this.value];
-
-
-    if(url){
-
-      window.location.href = url;
-
-    }
-
-  }
-);
-
-
 
 // 現在のページの言語を選択状態にする
 

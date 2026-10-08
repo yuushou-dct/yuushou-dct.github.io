@@ -1,62 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-
-  <!-- Typing Practice English -->
-
+  <!-- Typing Practice Japanese -->
   <url>
-
     <loc>https://yuushou-dct.github.io/</loc>
 
     <xhtml:link
       rel="alternate"
-      hreflang="en"
+      hreflang="ja"
       href="https://yuushou-dct.github.io/"/>
 
     <xhtml:link
       rel="alternate"
-      hreflang="ja"
-      href="https://yuushou-dct.github.io/ja/"/>
+      hreflang="en"
+      href="https://yuushou-dct.github.io/en/"/>
 
     <xhtml:link
       rel="alternate"
       hreflang="x-default"
-      href="https://yuushou-dct.github.io/"/>
-
+      href="https://yuushou-dct.github.io/en/"/>
   </url>
 
-
-  <!-- Typing Practice Japanese -->
-
+  <!-- Typing Practice English -->
   <url>
-
-    <loc>https://yuushou-dct.github.io/ja/</loc>
-
-    <xhtml:link
-      rel="alternate"
-      hreflang="en"
-      href="https://yuushou-dct.github.io/"/>
+    <loc>https://yuushou-dct.github.io/en/</loc>
 
     <xhtml:link
       rel="alternate"
       hreflang="ja"
-      href="https://yuushou-dct.github.io/ja/"/>
+      href="https://yuushou-dct.github.io/"/>
+
+    <xhtml:link
+      rel="alternate"
+      hreflang="en"
+      href="https://yuushou-dct.github.io/en/"/>
 
     <xhtml:link
       rel="alternate"
       hreflang="x-default"
-      href="https://yuushou-dct.github.io/"/>
-
+      href="https://yuushou-dct.github.io/en/"/>
   </url>
-
 
   <!-- TAI-SETSUNA Japanese -->
-
   <url>
-
     <loc>https://yuushou-dct.github.io/tai-setsuna/</loc>
 
     <xhtml:link
@@ -73,14 +61,10 @@
       rel="alternate"
       hreflang="x-default"
       href="https://yuushou-dct.github.io/en/tai-setsuna/"/>
-
   </url>
 
-
   <!-- TAI-SETSUNA English -->
-
   <url>
-
     <loc>https://yuushou-dct.github.io/en/tai-setsuna/</loc>
 
     <xhtml:link
@@ -97,8 +81,6 @@
       rel="alternate"
       hreflang="x-default"
       href="https://yuushou-dct.github.io/en/tai-setsuna/"/>
-
   </url>
-
 
 </urlset>

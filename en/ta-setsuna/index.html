@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <meta name="google-adsense-account"
+        content="ca-pub-1666906996789320">
+
+
+  <title>TAI-SETSUNA-瞬 | Free Typing Speed Game</title>
+
+  <meta name="description"
+        content="Play TAI-SETSUNA-瞬, a completely free typing speed game. Type words as fast as you can and measure your virtual speed in km/h and mph.">
+
+
+  <link rel="stylesheet"
+        href="taisetsuna.css">
+
+</head>
+
+
+<body>
+
+
+<div class="game-layout">
+
+
+  <!-- Left Slot Monitor -->
+
+  <aside class="slot-monitor">
+
+    <div class="slot-frame">
+
+      <div id="leftScreen"
+           class="slot-screen">
+
+
+        <!-- Standby Screen -->
+
+        <div class="standby">
+
+          <div class="slot-logo">
+            TAI-SETSUNA
+          </div>
+
+
+          <div class="push">
+            PUSH START
+          </div>
+
+
+          <div class="or">
+            or
+          </div>
+
+
+          <div class="enter">
+            ENTER
+          </div>
+
+
+          <div class="free">
+            ★ 100% FREE ★
+          </div>
+
+
+          <div class="howto">
+
+            <p>
+              Type the word shown
+              on the screen.
+            </p>
+
+            <p>
+              Challenge yourself
+              to type faster!
+            </p>
+
+            <div class="virtual">
+              1 character = virtual 1 m
+            </div>
+
+          </div>
+
+
+          <div class="producer">
+
+            Created by<br>
+
+            yuushou-dct-corporation<br>
+
+            Japan
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </aside>
+
+
+
+  <!-- Main Game -->
+
+  <main class="game-main">
+
+
+    <!-- Title -->
+
+    <div class="title-area">
+
+      <h1>
+        TAI-SETSUNA-瞬
+      </h1>
+
+      <span class="title-lightning"></span>
+
+    </div>
+
+
+
+    <p class="catch-copy">
+
+      Master Your Speed,
+      Master Your Typing!!
+
+    </p>
+
+
+
+    <!-- SPEED -->
+
+    <section class="speed-area">
+
+
+      <div class="speed-main">
+
+        <span id="speed">
+          0
+        </span>
+
+
+        <span class="kmh">
+          km/h
+        </span>
+
+      </div>
+
+
+
+      <div class="speed-divider">
+      </div>
+
+
+
+      <div class="mph-main">
+
+        <span id="mph">
+          0
+        </span>
+
+
+        <span class="mph-unit">
+          mph
+        </span>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- TARGET -->
+
+    <section class="target-panel">
+
+
+      <div class="target-label">
+        TARGET
+      </div>
+
+
+      <div id="word">
+        READY
+      </div>
+
+
+      <input
+        id="typingInput"
+        type="text"
+        placeholder="Type here"
+        autocomplete="off"
+        spellcheck="false"
+        disabled
+      >
+
+
+    </section>
+
+
+
+    <!-- RESULT -->
+
+    <section class="result-panel">
+
+
+      <div class="result-item">
+
+        <div class="result-label">
+          CORRECT
+        </div>
+
+        <div
+          id="correct"
+          class="correct-number">
+          0
+        </div>
+
+      </div>
+
+
+
+      <div class="result-line">
+      </div>
+
+
+
+      <div class="result-item">
+
+        <div class="result-label">
+          MISS
+        </div>
+
+        <div
+          id="miss"
+          class="miss-number">
+          0
+        </div>
+
+      </div>
+
+
+
+      <div class="result-line">
+      </div>
+
+
+
+      <div class="result-item">
+
+        <div class="result-label">
+          BEST SPEED
+        </div>
+
+        <div class="best-wrap">
+
+          <span
+            id="bestSpeed"
+            class="best-number">
+            0
+          </span>
+
+          <span class="best-unit">
+            km/h
+          </span>
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- START -->
+
+    <button id="startBtn">
+      START
+    </button>
+
+
+
+    <p class="bottom-message">
+
+      Split-second decisions. Accurate typing.<br>
+
+      Can you trust your instincts?
+
+    </p>
+
+
+  </main>
+
+
+</div>
+
+
+
+<script src="taisetsuna.js"></script>
+
+
+<!-- Cloudflare Web Analytics -->
+
+<script
+  type="module"
+  src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token": "c0261c3001bf42dbbbfe229eb3c4c244"}'>
+</script>
+
+<!-- End Cloudflare Web Analytics -->
+
+
+</body>
+
+</html>

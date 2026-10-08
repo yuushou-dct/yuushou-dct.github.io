@@ -236,21 +236,30 @@ document.addEventListener(
 
 
 
-// 現在のページの言語を選択状態にする
+
+
+// 最初の単語// 現在のページの言語を選択状態にする
 
 const currentLanguage =
   document.body.dataset.lang;
 
+if (language && currentLanguage) {
 
-if(currentLanguage){
+  const languageUrls = {
+    ja: "https://yuushou-dct.github.io/",
+    en: "https://yuushou-dct.github.io/en/",
+    zh: "https://yuushou-dct.github.io/zh/",
+    es: "https://yuushou-dct.github.io/es/",
+    fr: "https://yuushou-dct.github.io/fr/",
+    de: "https://yuushou-dct.github.io/de/",
+    it: "https://yuushou-dct.github.io/it/",
+    pt: "https://yuushou-dct.github.io/pt/"
+  };
 
-  language.value =
-    currentLanguage;
+  if (languageUrls[currentLanguage]) {
+    language.value = languageUrls[currentLanguage];
+  }
 
 }
-
-
-
-// 最初の単語
 
 nextWord();

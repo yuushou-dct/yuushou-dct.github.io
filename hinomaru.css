@@ -165,9 +165,8 @@ footer{
   transform: translateY(-50%);
 
   display: block;
-  width: 300px;
+  width: 220px;
   padding: 0;
-
   border: none;
   border-radius: 14px;
   overflow: hidden;
@@ -204,7 +203,7 @@ footer{
   .setsuna-link {
     position: static;
     transform: none;
-    width: min(300px, 85vw);
+    width: min(220px, 85vw);
     margin: 20px auto;
   }
 

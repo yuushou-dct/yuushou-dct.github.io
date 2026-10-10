@@ -208,4 +208,30 @@ footer{
   }
 
 }
+/* TAI-SETSUNA-瞬 バナー配置 */
 
+.setsuna-link {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 220px;
+  z-index: 1000;
+  display: block;
+}
+
+.setsuna-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* スマートフォン用 */
+@media (max-width: 768px) {
+  .setsuna-link {
+    position: static;
+    transform: none;
+    width: 160px;
+    margin: 20px auto;
+  }
+}

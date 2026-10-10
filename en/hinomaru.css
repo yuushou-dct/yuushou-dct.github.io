@@ -159,29 +159,54 @@ footer{
   line-height:1.6;
 }
 
+.setsuna-link {
+  position: fixed;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
 
-.setsuna-link{
-  position:fixed;
-  top:10px;
-  left:10px;
-  z-index:2147483647;
+  display: block;
+  width: 220px;
+  padding: 0;
 
-  padding:8px 14px;
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  background: none;
 
-  color:#fff;
-  background:#1763dc;
-
-  border:1px solid #69baff;
-  border-radius:7px;
-
-  font-size:14px;
-  font-weight:bold;
-
-  cursor:pointer;
-
-  pointer-events:auto;
+  box-shadow: 0 0 24px #168aff80;
+  z-index: 30;
+  cursor: pointer;
 }
 
-.setsuna-link:hover{
-  background:#438eff;
+.setsuna-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.setsuna-link:hover {
+  filter: brightness(1.15);
+}
+
+.setsuna-link:focus-visible {
+  outline: 3px solid #ffcf70;
+  outline-offset: 4px;
+}
+
+/* 画面が狭い場合はゲームの下に配置 */
+@media (max-width: 1350px), (max-height: 680px) {
+
+  body {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .setsuna-link {
+    position: static;
+    transform: none;
+    width: min(220px, 85vw);
+    margin: 20px auto;
+  }
+
 }

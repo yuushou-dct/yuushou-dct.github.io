@@ -281,7 +281,7 @@ footer{
 @media screen and (max-width: 600px) {
 
   /* Payhipの枠 */
-  .payhip-box {
+  .payhip-panel {
     position: static;
     width: 100%;
     max-width: 100%;
@@ -291,7 +291,7 @@ footer{
   }
 
   /* Payhipのボタン */
-  .payhip-box a {
+  .payhip-panel a {
     display: block;
     width: 100%;
     box-sizing: border-box;

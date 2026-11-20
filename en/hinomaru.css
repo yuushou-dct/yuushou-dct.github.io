@@ -237,29 +237,3 @@ footer{
     margin: 20px auto;
   }
 }
-/* ===== スマホ専用 Payhipリンク調整 ===== */
-@media screen and (max-width: 600px) {
-
-  /* Payhipの枠 */
-  .payhip-panel {
-    position: static;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    margin: 20px auto;
-    padding: 15px;
-  }
-
-  /* Payhipのボタン */
-  .payhip-panel a {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 10px 0;
-    padding: 12px 8px;
-    text-align: center;
-    white-space: normal;
-    overflow-wrap: anywhere;
-  }
-
-}

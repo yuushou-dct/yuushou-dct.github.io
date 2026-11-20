@@ -236,44 +236,42 @@ footer{
   }
 }
 
-
-/* Payhipの宣伝パネル */
+/* Payhipを右側の小さな縦長パネルにする */
 .payhip-panel {
   position: fixed;
-  top: 180px;
-  right: 20px;
-  width: 260px;
-  padding: 18px;
+  top: 190px;
+  right: 15px;
+  width: 220px;
+  padding: 12px;
   box-sizing: border-box;
   background: #171820;
   border: 2px solid #d4af37;
-  border-radius: 12px;
+  border-radius: 10px;
   text-align: center;
   z-index: 10;
 }
 
 .payhip-panel h2 {
-  color: #ffd700;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.5;
+  color: #ffd700;
 }
 
 .payhip-panel p {
+  font-size: 12px;
   color: white;
-  font-size: 13px;
 }
 
-.payhip-panel .payhip-btn {
+.payhip-panel a.payhip-btn {
   display: block;
-  margin: 12px 0;
-  padding: 12px 8px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 8px 0;
+  padding: 10px 5px;
   background: #d4af37;
   color: #111;
-  text-decoration: none;
+  font-size: 13px;
   font-weight: bold;
-  border-radius: 8px;
-}
-
-.payhip-panel .payhip-btn:hover {
-  background: #ffe680;
+  text-decoration: none;
+  border-radius: 6px;
 }

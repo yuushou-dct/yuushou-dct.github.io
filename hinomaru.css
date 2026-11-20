@@ -235,3 +235,52 @@ footer{
     margin: 20px auto;
   }
 }
+
+.payhip-panel {
+  position: fixed;
+  right: 20px;
+  top: 180px;
+  width: 260px;
+  padding: 18px;
+  background: #171820;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  text-align: center;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.payhip-panel h2 {
+  color: #ffd700;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.payhip-panel p {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.payhip-btn {
+  display: block;
+  margin-top: 12px;
+  padding: 12px 8px;
+  background: #d4af37;
+  color: #111111;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.payhip-btn:hover {
+  background: #ffe680;
+}
+
+/* 画面が狭い場合は下に配置 */
+@media (max-width: 1100px) {
+  .payhip-panel {
+    position: static;
+    width: min(90%, 360px);
+    margin: 30px auto;
+  }
+}

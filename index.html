@@ -1,13 +1,10 @@
 
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
 
   <meta charset="UTF-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="google-adsense-account"
         content="ca-pub-1666906996789320">
@@ -17,45 +14,22 @@
   <meta name="description"
         content="無料でできるタイピング練習サイトです。英語のタイピングをゲーム感覚で練習できます。初心者向けの練習方法や上達のコツも紹介しています。">
 
-  <link rel="alternate" hreflang="en"
+  <link rel="alternate" hreflang="ja"
         href="https://yuushou-dct.github.io/">
 
-  <link rel="alternate" hreflang="ja"
-        href="https://yuushou-dct.github.io/ja/">
-
-  <link rel="alternate" hreflang="zh-Hans"
-        href="https://yuushou-dct.github.io/zh/">
-
-  <link rel="alternate" hreflang="es"
-        href="https://yuushou-dct.github.io/es/">
-
-  <link rel="alternate" hreflang="fr"
-        href="https://yuushou-dct.github.io/fr/">
-
-  <link rel="alternate" hreflang="de"
-        href="https://yuushou-dct.github.io/de/">
-
-  <link rel="alternate" hreflang="it"
-        href="https://yuushou-dct.github.io/it/">
-
-  <link rel="alternate" hreflang="pt"
-        href="https://yuushou-dct.github.io/pt/">
+  <link rel="alternate" hreflang="en"
+        href="https://yuushou-dct.github.io/en/">
 
   <link rel="alternate" hreflang="x-default"
         href="https://yuushou-dct.github.io/">
 
-  <link rel="stylesheet" href="hinomaru.css">
+  <link rel="stylesheet" href="/hinomaru.css">
 
 </head>
 
-
 <body data-lang="ja" id="top">
 
-
-<!-- 最初のタイピング画面 -->
-
 <div class="game-layout">
-
 
   <!-- 左側の宣伝画像 -->
 
@@ -70,7 +44,6 @@
 
   </a>
 
-
   <!-- 中央のタイピング練習 -->
 
   <main class="container">
@@ -78,6 +51,7 @@
     <div class="language-box">
 
       <select id="language"
+              aria-label="言語選択"
               onchange="window.location.href=this.value">
 
         <option value="https://yuushou-dct.github.io/en/">
@@ -92,40 +66,32 @@
 
     </div>
 
-
     <h1>無料タイピング練習</h1>
 
-
     <p class="description">
-
       無料でできるタイピング練習サイトです。
       英語のタイピングをゲーム感覚で練習できます。
-
     </p>
 
-
     <div id="word"></div>
-
 
     <div class="info">
 
       <span>
-        <span>正解：</span>
+        正解：
         <b id="correct">0</b>
       </span>
 
       <span>
-        <span>ミス：</span>
+        ミス：
         <b id="miss">0</b>
       </span>
 
     </div>
 
-
     <div class="keyboard">
 
       <div class="row">
-
         <div class="key" data-key="q">Q</div>
         <div class="key" data-key="w">W</div>
         <div class="key" data-key="e">E</div>
@@ -136,12 +102,9 @@
         <div class="key" data-key="i">I</div>
         <div class="key" data-key="o">O</div>
         <div class="key" data-key="p">P</div>
-
       </div>
 
-
       <div class="row">
-
         <div class="key" data-key="a">A</div>
         <div class="key" data-key="s">S</div>
         <div class="key" data-key="d">D</div>
@@ -151,12 +114,9 @@
         <div class="key" data-key="j">J</div>
         <div class="key" data-key="k">K</div>
         <div class="key" data-key="l">L</div>
-
       </div>
 
-
       <div class="row">
-
         <div class="key" data-key="z">Z</div>
         <div class="key" data-key="x">X</div>
         <div class="key" data-key="c">C</div>
@@ -164,93 +124,66 @@
         <div class="key" data-key="b">B</div>
         <div class="key" data-key="n">N</div>
         <div class="key" data-key="m">M</div>
-
       </div>
 
     </div>
 
-
     <footer>
-
       yuushou-dct-corporation
-
       <br>
-
       Japan
-
     </footer>
 
-
     <a class="guide-link" href="#typing-guide">
-
       タイピング練習の使い方・上達のコツ ↓
-
     </a>
 
   </main>
-
 
   <!-- 右側のPayhip有料版紹介 -->
 
   <aside class="payhip-panel">
 
     <h2 id="paidTitle">
-
       有料版 TAI-SETSUNA-瞬
       3シリーズ公開中！
-
     </h2>
 
-
     <p id="paidMessage">
-
       遊んだ時間が、技術になる。
-
     </p>
-
 
     <a href="https://payhip.com/b/ezDcf"
        target="_blank"
        rel="noopener noreferrer"
        class="payhip-btn"
        id="paid1">
-
       有料版1を見る
-
     </a>
-
 
     <a href="https://payhip.com/b/QFHme"
        target="_blank"
        rel="noopener noreferrer"
        class="payhip-btn"
        id="paid2">
-
       有料版2を見る
-
     </a>
-
 
     <a href="https://payhip.com/b/JPG1M"
        target="_blank"
        rel="noopener noreferrer"
        class="payhip-btn"
        id="paid3">
-
       有料版3を見る
-
     </a>
 
   </aside>
 
-
 </div>
 
-
-<!-- ここから下部の解説文章 -->
+<!-- 下部の解説文章 -->
 
 <article class="typing-guide" id="typing-guide">
-
 
   <h2>無料タイピング練習について</h2>
 
@@ -273,36 +206,17 @@
     これが当サイトの開発理念です。
   </p>
 
-
   <h2>タイピング練習の使い方</h2>
 
   <ol>
-
-    <li>
-      画面に表示された英単語を確認します。
-    </li>
-
-    <li>
-      キーボードで表示された文字を入力します。
-    </li>
-
-    <li>
-      正解数とミス数を確認します。
-    </li>
-
-    <li>
-      正確な入力を意識して練習を続けます。
-    </li>
-
-    <li>
-      繰り返し練習して入力技術を高めましょう。
-    </li>
-
+    <li>画面に表示された英単語を確認します。</li>
+    <li>キーボードで表示された文字を入力します。</li>
+    <li>正解数とミス数を確認します。</li>
+    <li>正確な入力を意識して練習を続けます。</li>
+    <li>繰り返し練習して入力技術を高めましょう。</li>
   </ol>
 
-
   <h2>タイピングが速くなる練習方法</h2>
-
 
   <h3>1. 正確さを優先する</h3>
 
@@ -313,7 +227,6 @@
     正確な入力を繰り返すことで、
     入力速度の向上につながります。
   </p>
-
 
   <h3>2. ホームポジションを覚える</h3>
 
@@ -332,7 +245,6 @@
     意識しましょう。
   </p>
 
-
   <h3>3. キーボードを見ない練習をする</h3>
 
   <p>
@@ -341,7 +253,6 @@
     最初は時間がかかっても、
     繰り返すことでキーの位置を覚えやすくなります。
   </p>
-
 
   <h3>4. 毎日少しずつ継続する</h3>
 
@@ -352,7 +263,6 @@
     無理のない範囲で毎日の習慣にしましょう。
   </p>
 
-
   <h2>初心者向けの練習計画</h2>
 
   <p>
@@ -360,24 +270,19 @@
     次のような段階を意識して練習してみましょう。
   </p>
 
-
   <div class="table-scroll">
 
     <table class="practice-table">
 
       <thead>
-
         <tr>
           <th>段階</th>
           <th>練習内容</th>
           <th>目標</th>
         </tr>
-
       </thead>
 
-
       <tbody>
-
         <tr>
           <td>第1段階</td>
           <td>キーの位置を覚える</td>
@@ -401,13 +306,11 @@
           <td>繰り返し練習する</td>
           <td>正確さと速度の向上</td>
         </tr>
-
       </tbody>
 
     </table>
 
   </div>
-
 
   <p>
     上達するまでの期間には個人差があります。
@@ -415,7 +318,6 @@
     昨日の自分より少しでも上達することを
     目標にしてみましょう。
   </p>
-
 
   <h2>苦手なキーを克服する方法</h2>
 
@@ -431,7 +333,6 @@
     正しい指の動きを覚えてから、
     少しずつ入力速度を上げてみましょう。
   </p>
-
 
   <h2>タイピング練習で身につく技術</h2>
 
@@ -451,7 +352,6 @@
     学習や作業に集中しやすくなります。
   </p>
 
-
   <h2>TAI-SETSUNA-瞬について</h2>
 
   <p>
@@ -466,7 +366,6 @@
     目指して開発しています。
   </p>
 
-
   <h3>1文字＝1メートル</h3>
 
   <p>
@@ -477,9 +376,7 @@
   </p>
 
   <p class="formula">
-
     1秒間の正解文字数 × 3.6 ＝ 時速（km/h）
-
   </p>
 
   <p>
@@ -496,17 +393,12 @@
     ご利用ください。
   </p>
 
-
   <a class="game-text-link"
      href="https://yuushou-dct.github.io/tai-setsuna/">
-
     TAI-SETSUNA-瞬 無料タイピング速度ゲーム
-
   </a>
 
-
   <h2>よくある質問</h2>
-
 
   <h3>無料で利用できますか？</h3>
 
@@ -515,7 +407,6 @@
     当サイトの無料タイピング練習は、
     無料でご利用いただけます。
   </p>
-
 
   <h3>初心者でも利用できますか？</h3>
 
@@ -526,16 +417,13 @@
     まずは正確に入力することから始めましょう。
   </p>
 
-
   <h3>どのくらい練習すれば上達しますか？</h3>
 
   <p>
     上達するまでの期間には個人差があります。
     毎日の練習を通じて、
-    自分の入力の正確さや速度の変化を
-    確認しましょう。
+    自分の入力の正確さや速度の変化を確認しましょう。
   </p>
-
 
   <h3>スマートフォンでも利用できますか？</h3>
 
@@ -546,7 +434,6 @@
     練習をおすすめします。
   </p>
 
-
   <h3>速さと正確さのどちらが重要ですか？</h3>
 
   <p>
@@ -554,7 +441,6 @@
     間違いを減らし、安定して入力できるようになってから、
     少しずつ速度を上げていくことをおすすめします。
   </p>
-
 
   <h2>運営者について</h2>
 
@@ -576,43 +462,25 @@
     取り組んでいます。
   </p>
 
-
   <div class="typing-message">
-
     <p>一瞬、一瞬を真剣に生きよ。</p>
-
     <p>遊んだ時間が、技術になる。</p>
-
     <p>1文字＝1メートル。</p>
-
     <p>その一打が、君を前へ進める。</p>
-
   </div>
 
-
   <a class="back-top" href="#top">
-
     ページの先頭に戻る ↑
-
   </a>
-
 
 </article>
 
-
 <footer class="site-footer">
-
   <p>yuushou-dct-corporation</p>
-
   <p>Japan</p>
-
 </footer>
 
-
-<!-- JavaScript -->
-
-<script src="hinomaru.js"></script>
-
+<script src="/hinomaru.js"></script>
 
 <script
   type="module"
@@ -620,7 +488,5 @@
   data-cf-beacon='{"token":"c0261c3001bf42dbbbfe229eb3c4c244"}'>
 </script>
 
-
 </body>
-
 </html>

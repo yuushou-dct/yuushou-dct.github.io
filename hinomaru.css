@@ -1,184 +1,242 @@
-*{
-  box-sizing:border-box;
+
+/* ==============================
+   基本設定
+============================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  background: #0f0f12;
+  color: #e9eef5;
+
+  font-family: Arial, sans-serif;
 }
 
 
-body{
-  margin:0;
-  min-height:100vh;
+/* ==============================
+   タイピング練習画面
+============================== */
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
+.container {
+  width: 700px;
+  max-width: 95%;
+  min-height: 100vh;
 
-  background:#0f0f12;
-  color:#e9eef5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  font-family:Arial,sans-serif;
+  text-align: center;
+  padding: 20px 0;
 }
 
 
-.container{
-  width:700px;
-  text-align:center;
+/* 言語選択 */
+
+.language-box {
+  text-align: right;
+
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+#language {
+  padding: 8px 12px;
+
+  background: #202027;
+  color: #e9eef5;
+
+  border: 1px solid #3a3a45;
+  border-radius: 6px;
+
+  font-size: 14px;
 }
 
 
-.language-box{
-  text-align:right;
+/* タイトル */
 
-  margin-top:15px;
-  margin-bottom:20px;
+h1 {
+  margin-bottom: 40px;
+}
+
+.description {
+  margin-top: -25px;
+  margin-bottom: 30px;
+
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 
-#language{
-  padding:8px 12px;
+/* 出題文字 */
 
-  background:#202027;
-  color:#e9eef5;
+#word {
+  font-size: 60px;
+  font-weight: bold;
 
-  border:1px solid #3a3a45;
-  border-radius:6px;
+  letter-spacing: 0;
 
-  font-size:14px;
+  margin-bottom: 30px;
+
+  overflow-wrap: anywhere;
+}
+
+#word .typed {
+  color: #28a745;
+}
+
+#word .current {
+  color: #4f8cff;
+  text-decoration: underline;
+}
+
+#word .remaining {
+  color: #e9eef5;
 }
 
 
-h1{
-  margin-bottom:40px;
+/* 正解・ミス */
+
+.info {
+  display: flex;
+  justify-content: center;
+
+  gap: 50px;
+
+  margin-bottom: 40px;
+
+  font-size: 18px;
 }
 
 
-.description{
-  margin-top:-25px;
-  margin-bottom:30px;
+/* キーボード */
 
-  font-size:16px;
-  line-height:1.6;
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 8px;
+
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+
+  gap: 8px;
+}
+
+.key {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #202027;
+
+  border: 1px solid #3a3a45;
+  border-radius: 7px;
+
+  font-weight: bold;
+
+  transition: 0.08s;
+}
+
+.key.active {
+  background: #4f8cff;
+
+  transform: translateY(3px);
+}
+
+.key.miss {
+  background: #ff5d6c;
 }
 
 
-#word{
-  font-size:60px;
-  font-weight:bold;
+/* フッター */
 
-  letter-spacing:0px;
+footer {
+  margin-top: 5px;
 
-  margin-bottom:30px;
+  text-align: center;
+
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 
-#word .typed{
-  color:#28a745;
+/* 解説へのリンク */
+
+.guide-link {
+  display: block;
+
+  margin: 30px auto 10px;
+
+  color: #8bb9ff;
+
+  font-size: 14px;
+
+  text-decoration: none;
+}
+
+.guide-link:hover {
+  text-decoration: underline;
 }
 
 
-#word .current{
-  color:#4f8cff;
-  text-decoration:underline;
-}
+/* ==============================
+   TAI-SETSUNA-瞬 宣伝画像
+============================== */
 
-
-#word .remaining{
-  color:#e9eef5;
-}
-
-
-.info{
-  display:flex;
-
-  justify-content:center;
-
-  gap:50px;
-
-  margin-bottom:40px;
-
-  font-size:18px;
-}
-
-
-.keyboard{
-  display:flex;
-
-  flex-direction:column;
-
-  gap:8px;
-
-  align-items:center;
-}
-
-
-.row{
-  display:flex;
-
-  gap:8px;
-}
-
-
-.key{
-  width:52px;
-  height:52px;
-
-  display:flex;
-
-  justify-content:center;
-  align-items:center;
-
-  background:#202027;
-
-  border:1px solid #3a3a45;
-
-  border-radius:7px;
-
-  font-weight:bold;
-
-  transition:0.08s;
-}
-
-
-.key.active{
-  background:#4f8cff;
-
-  transform:translateY(3px);
-}
-
-
-.key.miss{
-  background:#ff5d6c;
-}
-
-
-footer{
-  margin-top:5px;
-
-  text-align:center;
-
-  font-size:14px;
-
-  line-height:1.6;
-}
 .setsuna-link {
   position: fixed;
+
   top: 50%;
-  left: 12px;
+  left: 20px;
+
   transform: translateY(-50%);
 
   display: block;
+
   width: 220px;
+
   padding: 0;
+
   border: none;
   border-radius: 14px;
+
   overflow: hidden;
+
   background: none;
 
   box-shadow: 0 0 24px #168aff80;
+
   z-index: 30;
+
   cursor: pointer;
 }
 
 .setsuna-link img {
   display: block;
+
   width: 100%;
   height: auto;
 }
@@ -192,194 +250,401 @@ footer{
   outline-offset: 4px;
 }
 
-/* 画面が狭い場合はゲームの下に配置 */
-@media (max-width: 1350px), (max-height: 680px) {
 
-  body {
-    flex-direction: column;
-    gap: 24px;
-  }
+/* ==============================
+   Payhip 有料版紹介
+============================== */
 
-  .setsuna-link {
-    position: static;
-    transform: none;
-    width: min(220px, 85vw);
-    margin: 20px auto;
-  }
-
-}
-/* TAI-SETSUNA-瞬 バナー配置 */
-
-.setsuna-link {
-  position: fixed;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 220px;
-  z-index: 1000;
-  display: block;
-}
-
-.setsuna-link img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* スマートフォン用 */
-@media (max-width: 768px) {
-  .setsuna-link {
-    position: static;
-    transform: none;
-    width: 160px;
-    margin: 20px auto;
-  }
-}
-
-
-/* Payhipを右側の小さな縦長パネルにする */
 .payhip-panel {
   position: fixed;
-  top: 190px;
+
+  top: 50%;
   right: 15px;
+
+  transform: translateY(-50%);
+
   width: 220px;
   padding: 12px;
-  box-sizing: border-box;
+
   background: #171820;
+
   border: 2px solid #d4af37;
   border-radius: 10px;
+
   text-align: center;
+
   z-index: 10;
 }
 
 .payhip-panel h2 {
   font-size: 15px;
   line-height: 1.5;
+
   color: #ffd700;
 }
 
 .payhip-panel p {
   font-size: 12px;
-  color: white;
+
+  color: #ffffff;
 }
 
 .payhip-panel a.payhip-btn {
   display: block;
+
   width: 100%;
-  box-sizing: border-box;
+
   margin: 8px 0;
   padding: 10px 5px;
+
   background: #d4af37;
-  color: #111;
+  color: #111111;
+
   font-size: 13px;
   font-weight: bold;
+
   text-decoration: none;
+
   border-radius: 6px;
+
+  overflow-wrap: anywhere;
 }
 
-/* ===== スマホ専用 Payhipリンク調整 ===== */
-@media screen and (max-width: 600px) {
-
-  /* Payhipの枠 */
-  .payhip-panel {
-    position: static;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    margin: 20px auto;
-    padding: 15px;
-  }
-
-  /* Payhipのボタン */
-  .payhip-panel a {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 10px 0;
-    padding: 12px 8px;
-    text-align: center;
-    white-space: normal;
-    overflow-wrap: anywhere;
-  }
+.payhip-panel a.payhip-btn:hover {
+  background: #f1cc55;
 }
-/* タイピング解説コンテンツ */
+
+
+/* ==============================
+   タイピング解説コンテンツ
+============================== */
 
 .typing-guide {
-    width: 90%;
-    max-width: 1000px;
-    margin: 60px auto 30px;
-    padding: 30px;
-    box-sizing: border-box;
-    background-color: #ffffff;
-    color: #333333;
-    border: 1px solid #dddddd;
-    border-radius: 12px;
-    text-align: left;
-    line-height: 1.9;
-    overflow-wrap: anywhere;
+  width: calc(100% - 520px);
+  max-width: 1000px;
+
+  margin: 40px auto;
+  padding: 30px;
+
+  background: #ffffff;
+  color: #333333;
+
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+
+  text-align: left;
+
+  line-height: 1.9;
+
+  overflow-wrap: anywhere;
+
+  flex-shrink: 0;
 }
 
 .typing-guide h2 {
-    font-size: 24px;
-    color: #174a80;
-    border-bottom: 2px solid #174a80;
-    padding-bottom: 10px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+  font-size: 24px;
+
+  color: #174a80;
+
+  border-bottom: 2px solid #174a80;
+
+  padding-bottom: 10px;
+
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.typing-guide h2:first-child {
+  margin-top: 0;
 }
 
 .typing-guide h3 {
-    font-size: 18px;
-    color: #333333;
-    margin-top: 25px;
+  font-size: 18px;
+
+  color: #333333;
+
+  margin-top: 25px;
 }
 
 .typing-guide p {
-    font-size: 16px;
-    margin-bottom: 16px;
+  font-size: 16px;
+
+  margin-bottom: 16px;
 }
 
 .typing-guide ol {
-    padding-left: 25px;
+  padding-left: 25px;
 }
 
 .typing-guide li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
+
+
+/* ==============================
+   練習計画の表
+============================== */
+
+.table-scroll {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.practice-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin: 20px 0;
+
+  font-size: 14px;
+}
+
+.practice-table th {
+  padding: 12px;
+
+  background: #174a80;
+  color: #ffffff;
+
+  border: 1px solid #dddddd;
+
+  text-align: left;
+}
+
+.practice-table td {
+  padding: 12px;
+
+  border: 1px solid #dddddd;
+}
+
+.practice-table tbody tr:nth-child(even) {
+  background: #f1f5f9;
+}
+
+
+/* ==============================
+   速度計算式
+============================== */
+
+.formula {
+  background: #edf4ff;
+
+  border-left: 4px solid #174a80;
+
+  padding: 15px;
+
+  font-weight: bold;
+}
+
+
+/* ゲームへのリンク */
+
+.game-text-link {
+  display: block;
+
+  color: #174a80;
+
+  font-weight: bold;
+
+  margin: 20px 0;
+
+  text-decoration: underline;
+}
+
+.game-text-link:hover {
+  color: #4f8cff;
+}
+
+
+/* ==============================
+   ブランドメッセージ
+============================== */
 
 .typing-message {
-    background-color: #10243d;
-    color: #ffd700;
-    padding: 25px;
-    margin-top: 35px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
+  background: #10243d;
+  color: #ffd700;
+
+  padding: 25px;
+
+  margin-top: 35px;
+
+  border-radius: 10px;
+
+  text-align: center;
+
+  font-weight: bold;
 }
 
-/* スマートフォン対応 */
+.typing-message p {
+  margin: 12px 0;
+}
 
-@media screen and (max-width: 600px) {
 
-    .typing-guide {
-        width: 95%;
-        padding: 15px;
-        margin: 30px auto;
-    }
+/* ページ先頭へ戻る */
 
-    .typing-guide h2 {
-        font-size: 20px;
-    }
+.back-top {
+  display: block;
 
-    .typing-guide h3 {
-        font-size: 17px;
-    }
+  margin-top: 30px;
 
-    .typing-guide p {
-        font-size: 15px;
-    }
+  text-align: center;
 
-    .typing-message {
-        padding: 15px;
-    }
+  color: #174a80;
+
+  text-decoration: none;
+}
+
+.back-top:hover {
+  text-decoration: underline;
+}
+
+
+/* ==============================
+   サイト下部
+============================== */
+
+.site-footer {
+  width: 100%;
+
+  padding: 20px;
+
+  margin-top: 10px;
+
+  color: #a0a0aa;
+
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 5px 0;
+}
+
+
+/* ==============================
+   画面が狭い場合
+============================== */
+
+@media (max-width: 1240px),
+       (max-height: 680px) {
+
+  .container {
+    min-height: auto;
+
+    padding: 30px 0;
+  }
+
+  .setsuna-link {
+    position: static;
+
+    transform: none;
+
+    width: min(220px, 85vw);
+
+    margin: 20px auto;
+  }
+
+  .payhip-panel {
+    position: static;
+
+    transform: none;
+
+    width: 90%;
+    max-width: 400px;
+
+    margin: 20px auto;
+  }
+
+  .typing-guide {
+    width: 90%;
+
+    margin: 30px auto;
+  }
+
+}
+
+
+/* ==============================
+   スマートフォン対応
+============================== */
+
+@media (max-width: 768px) {
+
+  .container {
+    width: 95%;
+    min-height: auto;
+
+    padding: 15px 0;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  #word {
+    font-size: clamp(24px, 8vw, 60px);
+  }
+
+  .keyboard {
+    width: 100%;
+  }
+
+  .row {
+    gap: 4px;
+  }
+
+  .key {
+    width: min(52px, 8vw);
+    height: min(52px, 10vw);
+
+    font-size: 14px;
+  }
+
+  .info {
+    gap: 20px;
+
+    font-size: 16px;
+  }
+
+  .setsuna-link {
+    width: 160px;
+  }
+
+  .payhip-panel {
+    width: 90%;
+  }
+
+  .typing-guide {
+    width: 95%;
+
+    padding: 15px;
+  }
+
+  .typing-guide h2 {
+    font-size: 20px;
+  }
+
+  .typing-guide h3 {
+    font-size: 17px;
+  }
+
+  .typing-guide p {
+    font-size: 15px;
+  }
+
+  .typing-message {
+    padding: 15px;
+  }
+
+  .practice-table th,
+  .practice-table td {
+    padding: 8px;
+
+    font-size: 12px;
+  }
+
 }

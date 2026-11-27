@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,158 +6,83 @@
 
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
 
   <meta name="google-adsense-account"
         content="ca-pub-1666906996789320">
 
   <title>Free Typing Practice</title>
 
-  <meta
-    name="description"
-    content="Free typing practice game. Improve your English typing speed and accuracy with simple, fun typing practice."
-  >
+  <meta name="description"
+        content="Improve your typing skills with free English typing practice. Learn keyboard techniques, improve accuracy, and discover practical typing tips for beginners.">
 
-  <!-- hreflang -->
+  <link rel="alternate" hreflang="en"
+        href="https://yuushou-dct.github.io/en/">
 
-  <link rel="alternate"
-        hreflang="en"
+  <link rel="alternate" hreflang="ja"
         href="https://yuushou-dct.github.io/">
 
-  <link rel="alternate"
-        hreflang="ja"
-        href="https://yuushou-dct.github.io/ja/">
-
-  <link rel="alternate"
-        hreflang="zh-Hans"
-        href="https://yuushou-dct.github.io/zh/">
-
-  <link rel="alternate"
-        hreflang="es"
-        href="https://yuushou-dct.github.io/es/">
-
-  <link rel="alternate"
-        hreflang="fr"
-        href="https://yuushou-dct.github.io/fr/">
-
-  <link rel="alternate"
-        hreflang="de"
-        href="https://yuushou-dct.github.io/de/">
-
-  <link rel="alternate"
-        hreflang="it"
-        href="https://yuushou-dct.github.io/it/">
-
-  <link rel="alternate"
-        hreflang="pt"
-        href="https://yuushou-dct.github.io/pt/">
-
-  <link rel="alternate"
-        hreflang="x-default"
+  <link rel="alternate" hreflang="x-default"
         href="https://yuushou-dct.github.io/">
 
-  <link rel="stylesheet" href="hinomaru.css">
+  <link rel="stylesheet" href="hinomaru.css?v=3">
 
 </head>
 
-<style>
-.payhip-panel {
-  position: fixed !important;
-  top: 190px !important;
-  right: 15px !important;
-  left: auto !important;
-  width: 220px !important;
-  max-width: 220px !important;
-  box-sizing: border-box !important;
-  padding: 12px !important;
-  background: #171820 !important;
-  border: 2px solid #d4af37 !important;
-  border-radius: 10px !important;
-  text-align: center !important;
-  z-index: 10 !important;
-}
 
-.payhip-panel h2 {
-  font-size: 15px !important;
-  line-height: 1.5;
-  color: #ffd700;
-}
-
-.payhip-panel p {
-  font-size: 12px;
-  color: white;
-}
-
-.payhip-panel a.payhip-btn {
-  display: block !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  margin: 8px 0 !important;
-  padding: 10px 5px !important;
-  background: #d4af37 !important;
-  color: #111 !important;
-  font-size: 13px !important;
-  font-weight: bold;
-  text-decoration: none !important;
-  border-radius: 6px;
-}
-
-/* スマホ専用 */
-@media screen and (max-width: 600px) {
-  .payhip-panel {
-    position: static !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 20px auto !important;
-    box-sizing: border-box;
-  }
-
-  .payhip-panel .payhip-btn {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    margin: 10px 0;
-    white-space: normal;
-    overflow-wrap: anywhere;
-  }
-}
+<body data-lang="en" id="top">
 
 
+<!-- Main typing practice screen -->
+
+<div class="game-layout">
 
 
+  <!-- Left banner -->
 
-</style>
+  <a class="setsuna-link"
+     href="https://yuushou-dct.github.io/tai-setsuna/">
+
+    <img
+      src="/setsuna-banner.webp"
+      alt="TAI-SETSUNA Free Typing Speed Game"
+      width="300"
+      height="600">
+
+  </a>
 
 
-<body data-lang="en">
+  <!-- Typing practice -->
 
   <main class="container">
 
     <div class="language-box">
 
       <select id="language"
-        onchange="window.location.href=this.value">
+              onchange="window.location.href=this.value">
 
-  <option value="https://yuushou-dct.github.io/en/" selected>
-    English
-  </option>
+        <option value="https://yuushou-dct.github.io/en/" selected>
+          English
+        </option>
 
-  <option value="https://yuushou-dct.github.io/">
-    日本語
-  </option>
-</select>
+        <option value="https://yuushou-dct.github.io/">
+          日本語
+        </option>
+
+      </select>
 
     </div>
 
 
-    
     <h1>Free Typing Practice</h1>
 
 
     <p class="description">
-      Free typing practice game.
-      Improve your English typing speed and accuracy
-      with simple, fun typing practice.
+
+      Practice English typing for free.
+      Improve your typing skills while having fun.
+
     </p>
 
 
@@ -166,12 +92,12 @@
     <div class="info">
 
       <span>
-        <span>Correct:</span>
+        <span>Correct: </span>
         <b id="correct">0</b>
       </span>
 
       <span>
-        <span>Mistakes:</span>
+        <span>Mistakes: </span>
         <b id="miss">0</b>
       </span>
 
@@ -236,60 +162,499 @@
 
     </footer>
 
+
+    <a class="guide-link" href="#typing-guide">
+
+      How to Practice and Improve Your Typing ↓
+
+    </a>
+
   </main>
 
 
-  <script src="hinomaru.js"></script>
+  <!-- Right Payhip panel -->
+
+  <aside class="payhip-panel">
+
+    <h2 id="paidTitle">
+
+      TAI-SETSUNA-瞬
+      Three Premium Games Available!
+
+    </h2>
 
 
-  <!-- Cloudflare Web Analytics -->
+    <p id="paidMessage">
 
-  <script
-    type="module"
-    src="https://static.cloudflareinsights.com/beacon.min.js"
-    data-cf-beacon='{"token": "c0261c3001bf42dbbbfe229eb3c4c244"}'>
-  </script>
+      Time spent playing becomes skill.
 
-  <!-- End Cloudflare Web Analytics -->
-<a
-  class="setsuna-link"
-  href="https://yuushou-dct.github.io/en/tai-setsuna/">
+    </p>
 
-  <img
-    src="/setsuna-banner.webp"
-    alt="TAI-SETSUNA Typing Speed Challenge"
-    width="300"
-    height="600">
 
-</a>
+    <a href="https://payhip.com/b/ezDcf"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="payhip-btn"
+       id="paid1">
 
-<aside class="payhip-panel" aria-label="Premium Games">
-  <h2>
-    TAI-SETSUNA-瞬
-    3 Premium Games Available!
-  </h2>
+      View Premium Game 1
 
-  <p>Every moment you play builds your skills.</p>
+    </a>
 
-  <a href="https://payhip.com/b/ezDcf"
-     target="_blank" rel="noopener noreferrer"
-     class="payhip-btn">
-    View Paid Game 1
+
+    <a href="https://payhip.com/b/QFHme"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="payhip-btn"
+       id="paid2">
+
+      View Premium Game 2
+
+    </a>
+
+
+    <a href="https://payhip.com/b/JPG1M"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="payhip-btn"
+       id="paid3">
+
+      View Premium Game 3
+
+    </a>
+
+  </aside>
+
+
+</div>
+
+
+<!-- Typing practice guide -->
+
+<article class="typing-guide" id="typing-guide">
+
+
+  <h2>About Free Typing Practice</h2>
+
+  <p>
+    This website was developed to help beginners
+    and experienced computer users improve their
+    typing skills while enjoying the learning process.
+    The typing practice is available free of charge.
+  </p>
+
+  <p>
+    By typing the English words displayed on the screen,
+    you can become familiar with the positions of
+    letters on your keyboard.
+    You can monitor your correct entries and mistakes
+    while practicing at your own pace.
+  </p>
+
+  <p>
+    Our development philosophy is simple:
+    Time spent playing becomes skill.
+  </p>
+
+
+  <h2>How to Use This Typing Practice</h2>
+
+  <ol>
+
+    <li>
+      Look at the English word displayed on the screen.
+    </li>
+
+    <li>
+      Type the displayed letters using your keyboard.
+    </li>
+
+    <li>
+      Check your correct entries and mistakes.
+    </li>
+
+    <li>
+      Continue practicing while focusing on accuracy.
+    </li>
+
+    <li>
+      Repeat the practice to improve your typing skills.
+    </li>
+
+  </ol>
+
+
+  <h2>How to Improve Your Typing Speed</h2>
+
+
+  <h3>1. Focus on Accuracy First</h3>
+
+  <p>
+    Beginners do not need to type quickly from the start.
+    Instead, concentrate on pressing the correct keys.
+    Repeated accurate typing can help you develop
+    better typing habits and gradually increase your speed.
+  </p>
+
+
+  <h3>2. Learn the Home Row Position</h3>
+
+  <p>
+    Place your left index finger on the F key
+    and your right index finger on the J key.
+    Most computer keyboards have small raised markings
+    on these two keys to help you find the correct
+    finger positions without looking down.
+  </p>
+
+  <p>
+    Place your left-hand fingers on A, S, D, and F,
+    and your right-hand fingers on J, K, L,
+    and the semicolon key on a standard QWERTY keyboard.
+    Try to return your fingers to these positions
+    after pressing other keys.
+  </p>
+
+
+  <h3>3. Practice Without Looking at the Keyboard</h3>
+
+  <p>
+    Gradually reduce the number of times you look
+    at your keyboard.
+    Try to focus on the screen while typing.
+    Although this may feel difficult at first,
+    regular practice can help you remember
+    the positions of the keys.
+  </p>
+
+
+  <h3>4. Practice a Little Every Day</h3>
+
+  <p>
+    Even five to ten minutes of daily practice
+    can help you develop consistent typing habits.
+    Rather than relying only on long practice sessions,
+    make typing a regular part of your daily routine.
+    Take breaks whenever you feel tired.
+  </p>
+
+
+  <h2>A Typing Practice Plan for Beginners</h2>
+
+  <p>
+    If you are new to typing,
+    try following these four stages.
+    Progress at a comfortable pace and focus
+    on developing accurate keyboard movements.
+  </p>
+
+
+  <div class="table-scroll">
+
+    <table class="practice-table">
+
+      <thead>
+
+        <tr>
+
+          <th>Stage</th>
+
+          <th>Practice</th>
+
+          <th>Goal</th>
+
+        </tr>
+
+      </thead>
+
+
+      <tbody>
+
+        <tr>
+
+          <td>Stage 1</td>
+
+          <td>Learn key positions</td>
+
+          <td>Accurate typing</td>
+
+        </tr>
+
+
+        <tr>
+
+          <td>Stage 2</td>
+
+          <td>Type English words</td>
+
+          <td>Reduce mistakes</td>
+
+        </tr>
+
+
+        <tr>
+
+          <td>Stage 3</td>
+
+          <td>Look at the screen while typing</td>
+
+          <td>Remember key positions</td>
+
+        </tr>
+
+
+        <tr>
+
+          <td>Stage 4</td>
+
+          <td>Practice regularly</td>
+
+          <td>Improve speed and accuracy</td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+
+  <p>
+    Everyone learns at a different pace.
+    Instead of comparing yourself with other people,
+    aim to improve your own abilities little by little.
+    Small improvements can become meaningful progress
+    over time.
+  </p>
+
+
+  <h2>How to Improve Difficult Keystrokes</h2>
+
+  <p>
+    If you frequently make mistakes with certain letters,
+    take a moment to identify their keyboard positions.
+    Pay particular attention to letters that require
+    fingers you do not normally use very often.
+  </p>
+
+  <p>
+    Practice typing English words containing
+    those difficult letters slowly.
+    Once you become comfortable with the correct
+    finger movements, gradually increase your speed.
+    Accuracy should remain your priority.
+  </p>
+
+
+  <h2>Why Typing Skills Are Important</h2>
+
+  <p>
+    Typing is one of the fundamental skills
+    for using a computer effectively.
+    It is useful for writing documents,
+    sending emails, office work,
+    studying, and computer programming.
+  </p>
+
+  <p>
+    Accurate typing is especially helpful
+    when learning programming.
+    Programming requires the correct entry of
+    letters, numbers, and symbols.
+    Becoming comfortable with a keyboard
+    can reduce the effort required for typing
+    and help you concentrate on your work.
+  </p>
+
+
+  <h2>About TAI-SETSUNA-瞬</h2>
+
+  <p>
+    TAI-SETSUNA-瞬 is an original game series
+    that combines typing practice with entertainment.
+  </p>
+
+  <p>
+    Our goal is to transform repetitive typing practice
+    into an enjoyable experience where players
+    can develop practical computer skills
+    while having fun.
+  </p>
+
+
+  <h3>One Character Equals One Meter</h3>
+
+  <p>
+    The TAI-SETSUNA speed game uses an original
+    concept in which one correctly typed character
+    represents one meter of travel.
+    Typing speed is converted into virtual
+    movement speed.
+  </p>
+
+
+  <p class="formula">
+
+    Correct characters per second × 3.6
+    = Speed (km/h)
+
+  </p>
+
+
+  <p>
+    For example, typing five correct characters
+    per second corresponds to a virtual speed
+    of 18 km/h.
+    Typing ten correct characters per second
+    corresponds to 36 km/h.
+  </p>
+
+  <p>
+    This system provides an entertaining way
+    to visualize typing speed and understand
+    your performance through the concept of movement.
+  </p>
+
+  <p>
+    If you would like to challenge your typing speed,
+    try our free TAI-SETSUNA typing speed game.
+  </p>
+
+
+  <a class="game-text-link"
+     href="https://yuushou-dct.github.io/tai-setsuna/">
+
+    TAI-SETSUNA-瞬 Free Typing Speed Game
+
   </a>
 
-  <a href="https://payhip.com/b/QFHme"
-     target="_blank" rel="noopener noreferrer"
-     class="payhip-btn">
-    View Paid Game 2
+
+  <h2>Frequently Asked Questions</h2>
+
+
+  <h3>Is this typing practice free?</h3>
+
+  <p>
+    Yes.
+    The typing practice provided on this website
+    is available free of charge.
+  </p>
+
+
+  <h3>Can beginners use this website?</h3>
+
+  <p>
+    Yes.
+    Beginners can practice at their own pace.
+    Start by focusing on accurate typing
+    rather than trying to type quickly.
+  </p>
+
+
+  <h3>How long does it take to improve?</h3>
+
+  <p>
+    The time required to improve varies
+    from person to person.
+    Regular practice can help you become
+    more comfortable with your keyboard.
+    Pay attention to changes in your accuracy
+    and typing speed over time.
+  </p>
+
+
+  <h3>Can I practice on a smartphone?</h3>
+
+  <p>
+    The available input methods may vary
+    depending on your device and browser.
+    For learning traditional typing techniques,
+    we recommend using a computer
+    with a physical keyboard.
+  </p>
+
+
+  <h3>Which is more important, speed or accuracy?</h3>
+
+  <p>
+    Beginners should prioritize accuracy.
+    Once you can type consistently
+    with fewer mistakes,
+    gradually work on increasing your speed.
+    Accurate typing is an important foundation
+    for efficient computer use.
+  </p>
+
+
+  <h2>About the Developer</h2>
+
+  <p>
+
+    Operated by yuushou-dct-corporation, Japan.
+
+  </p>
+
+  <p>
+    Our goal is to create enjoyable learning
+    experiences through programming
+    and software development.
+    We believe that developing computer skills
+    should be accessible and engaging.
+  </p>
+
+  <p>
+    In addition to developing the TAI-SETSUNA-瞬
+    typing game series,
+    we are also working on practical applications
+    designed to be useful in everyday life.
+  </p>
+
+
+  <div class="typing-message">
+
+    <p>Live every moment to the fullest.</p>
+
+    <p>Time spent playing becomes skill.</p>
+
+    <p>One Character = One Meter.</p>
+
+    <p>Every keystroke moves you forward.</p>
+
+  </div>
+
+
+  <a class="back-top" href="#top">
+
+    Back to Top ↑
+
   </a>
 
-  <a href="https://payhip.com/b/JPG1M"
-     target="_blank" rel="noopener noreferrer"
-     class="payhip-btn">
-    View Paid Game 3
-  </a>
-</aside>
+
+</article>
+
+
+<footer class="site-footer">
+
+  <p>yuushou-dct-corporation</p>
+
+  <p>Japan</p>
+
+</footer>
+
+
+<!-- JavaScript -->
+
+<script src="hinomaru.js"></script>
+
+
+<script
+  type="module"
+  src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token":"c0261c3001bf42dbbbfe229eb3c4c244"}'>
+</script>
 
 
 </body>
+
 </html>

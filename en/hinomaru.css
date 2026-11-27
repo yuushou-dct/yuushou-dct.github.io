@@ -1,7 +1,5 @@
 
-/* ==============================
-   Basic settings
-============================== */
+/* 基本設定 */
 
 * {
   box-sizing: border-box;
@@ -14,73 +12,60 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-
   display: block;
-
   background: #0f0f12;
   color: #e9eef5;
-
   font-family: Arial, sans-serif;
 }
 
 
-/* ==============================
-   Main game layout
-============================== */
+/* 最初の画面：3列配置 */
 
 .game-layout {
   width: 100%;
   min-height: 100vh;
-
   display: grid;
 
   grid-template-columns:
-    220px minmax(0, 700px) 220px;
+    minmax(0, 220px)
+    minmax(0, 700px)
+    minmax(0, 220px);
 
   align-items: center;
   justify-content: center;
 
-  gap: 25px;
-
+  gap: 20px;
   padding: 20px;
 }
 
 
-/* ==============================
-   Typing practice
-============================== */
+/* 中央のタイピング練習 */
 
 .container {
   width: 100%;
   min-width: 0;
-
   text-align: center;
 }
 
 
-/* Language selection */
+/* 言語選択 */
 
 .language-box {
   text-align: right;
-
-  margin-top: 15px;
-  margin-bottom: 20px;
+  margin: 15px 0 20px;
 }
 
 #language {
   padding: 8px 12px;
-
   background: #202027;
   color: #e9eef5;
-
   border: 1px solid #3a3a45;
   border-radius: 6px;
-
   font-size: 14px;
 }
 
 
-/* Title */
+/* タイトル */
 
 h1 {
   margin-bottom: 40px;
@@ -89,24 +74,18 @@ h1 {
 .description {
   margin-top: -25px;
   margin-bottom: 30px;
-
   font-size: 16px;
   line-height: 1.6;
 }
 
 
-/* ==============================
-   Typing word
-============================== */
+/* 出題文字 */
 
 #word {
-  font-size: 60px;
+  font-size: clamp(24px, 5vw, 60px);
   font-weight: bold;
-
   letter-spacing: 0;
-
   margin-bottom: 30px;
-
   overflow-wrap: anywhere;
 }
 
@@ -116,7 +95,6 @@ h1 {
 
 #word .current {
   color: #4f8cff;
-
   text-decoration: underline;
 }
 
@@ -125,64 +103,54 @@ h1 {
 }
 
 
-/* ==============================
-   Correct entries and mistakes
-============================== */
+/* 正解とミス */
 
 .info {
   display: flex;
   justify-content: center;
-
-  gap: 50px;
-
+  flex-wrap: wrap;
+  gap: 30px;
   margin-bottom: 40px;
-
   font-size: 18px;
 }
 
 
-/* ==============================
-   Keyboard
-============================== */
+/* キーボード */
 
 .keyboard {
   display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: 8px;
-
   width: 100%;
+  container-type: inline-size;
 }
 
 .row {
   display: flex;
   justify-content: center;
-
-  gap: 8px;
+  gap: 6px;
 }
 
 .key {
   width: 52px;
+  width: min(52px, 8cqw);
   height: 52px;
+  height: min(52px, 10cqw);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   background: #202027;
-
   border: 1px solid #3a3a45;
   border-radius: 7px;
-
   font-weight: bold;
-
   transition: 0.08s;
 }
 
 .key.active {
   background: #4f8cff;
-
   transform: translateY(3px);
 }
 
@@ -191,50 +159,40 @@ h1 {
 }
 
 
-/* ==============================
-   Footer
-============================== */
+/* フッター */
 
 footer {
   margin-top: 10px;
-
   text-align: center;
-
   font-size: 14px;
   line-height: 1.6;
 }
 
 
-/* ==============================
-   Left TAI-SETSUNA banner
-============================== */
+/* 左側の宣伝画像 */
 
 .setsuna-link {
   position: static;
-
   display: block;
 
-  width: 220px;
+  width: 100%;
+  max-width: 220px;
+  min-width: 0;
 
   margin: 0 auto;
-
   padding: 0;
 
   border: none;
   border-radius: 14px;
-
   overflow: hidden;
 
   background: none;
-
   box-shadow: 0 0 24px #168aff80;
-
   cursor: pointer;
 }
 
 .setsuna-link img {
   display: block;
-
   width: 100%;
   height: auto;
 }
@@ -249,45 +207,38 @@ footer {
 }
 
 
-/* ==============================
-   Right Payhip panel
-============================== */
+/* 右側のPayhipパネル */
 
 .payhip-panel {
   position: static;
 
-  width: 220px;
+  width: 100%;
+  max-width: 220px;
+  min-width: 0;
 
   padding: 12px;
-
   margin: 0 auto;
 
   background: #171820;
-
   border: 2px solid #d4af37;
   border-radius: 10px;
-
   text-align: center;
-
   overflow-wrap: anywhere;
 }
 
 .payhip-panel h2 {
   font-size: 15px;
   line-height: 1.5;
-
   color: #ffd700;
 }
 
 .payhip-panel p {
   font-size: 12px;
-
   color: #ffffff;
 }
 
 .payhip-panel a.payhip-btn {
   display: block;
-
   width: 100%;
 
   margin: 8px 0;
@@ -298,11 +249,9 @@ footer {
 
   font-size: 13px;
   font-weight: bold;
-
   text-decoration: none;
 
   border-radius: 6px;
-
   overflow-wrap: anywhere;
 }
 
@@ -311,19 +260,13 @@ footer {
 }
 
 
-/* ==============================
-   Guide link
-============================== */
+/* 解説へのリンク */
 
 .guide-link {
   display: block;
-
   margin: 30px auto 10px;
-
   color: #8bb9ff;
-
   font-size: 15px;
-
   text-decoration: none;
 }
 
@@ -332,13 +275,10 @@ footer {
 }
 
 
-/* ==============================
-   Typing practice guide
-============================== */
+/* 下部の解説文章 */
 
 .typing-guide {
   display: block;
-
   width: 90%;
   max-width: 1000px;
 
@@ -352,21 +292,17 @@ footer {
   border-radius: 12px;
 
   text-align: left;
-
   line-height: 1.9;
-
   overflow-wrap: anywhere;
 }
 
 .typing-guide h2 {
   font-size: 24px;
-
   color: #174a80;
 
   border-bottom: 2px solid #174a80;
 
   padding-bottom: 10px;
-
   margin-top: 40px;
   margin-bottom: 20px;
 }
@@ -377,15 +313,12 @@ footer {
 
 .typing-guide h3 {
   font-size: 18px;
-
   color: #333333;
-
   margin-top: 25px;
 }
 
 .typing-guide p {
   font-size: 16px;
-
   margin-bottom: 16px;
 }
 
@@ -398,40 +331,30 @@ footer {
 }
 
 
-/* ==============================
-   Practice plan table
-============================== */
+/* 練習計画の表 */
 
 .table-scroll {
   width: 100%;
-
   overflow-x: auto;
 }
 
 .practice-table {
   width: 100%;
-
   border-collapse: collapse;
-
   margin: 20px 0;
-
   font-size: 14px;
 }
 
 .practice-table th {
   padding: 12px;
-
   background: #174a80;
   color: #ffffff;
-
   border: 1px solid #dddddd;
-
   text-align: left;
 }
 
 .practice-table td {
   padding: 12px;
-
   border: 1px solid #dddddd;
 }
 
@@ -440,30 +363,22 @@ footer {
 }
 
 
-/* ==============================
-   Speed formula
-============================== */
+/* 速度計算式 */
 
 .formula {
   background: #edf4ff;
-
   border-left: 4px solid #174a80;
-
   padding: 15px;
-
   font-weight: bold;
 }
 
 
-/* Game link */
+/* ゲームへのリンク */
 
 .game-text-link {
   display: block;
-
   color: #174a80;
-
   font-weight: bold;
-
   margin: 20px 0;
 }
 
@@ -472,22 +387,15 @@ footer {
 }
 
 
-/* ==============================
-   Brand message
-============================== */
+/* ブランドメッセージ */
 
 .typing-message {
   background: #10243d;
   color: #ffd700;
-
   padding: 25px;
-
   margin-top: 35px;
-
   border-radius: 10px;
-
   text-align: center;
-
   font-weight: bold;
 }
 
@@ -496,19 +404,13 @@ footer {
 }
 
 
-/* ==============================
-   Back to top
-============================== */
+/* ページ先頭に戻る */
 
 .back-top {
   display: block;
-
   margin-top: 30px;
-
   text-align: center;
-
   color: #174a80;
-
   text-decoration: none;
 }
 
@@ -517,15 +419,11 @@ footer {
 }
 
 
-/* ==============================
-   Site footer
-============================== */
+/* サイト下部 */
 
 .site-footer {
   padding: 25px;
-
   color: #a0a0aa;
-
   text-align: center;
 }
 
@@ -534,55 +432,71 @@ footer {
 }
 
 
-/* ==============================
-   Smaller screens
-============================== */
+/* 小型パソコン・タブレット */
 
-@media (max-width: 1240px) {
+@media (min-width: 901px) and (max-width: 1200px) {
+
+  .game-layout {
+    grid-template-columns:
+      minmax(0, 150px)
+      minmax(0, 1fr)
+      minmax(0, 150px);
+
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .payhip-panel {
+    padding: 8px;
+  }
+
+  .payhip-panel h2 {
+    font-size: 13px;
+  }
+
+  .payhip-panel a.payhip-btn {
+    font-size: 12px;
+  }
+}
+
+
+/* 画面幅が狭い場合 */
+
+@media (max-width: 900px) {
 
   .game-layout {
     display: flex;
-
     flex-direction: column;
-
     min-height: auto;
-
     gap: 30px;
-
     padding: 20px;
   }
 
   .container {
     width: 100%;
     max-width: 700px;
-
     order: 1;
   }
 
   .setsuna-link {
-    order: 2;
-
     width: 200px;
+    order: 2;
   }
 
   .payhip-panel {
-    order: 3;
-
     width: 90%;
     max-width: 400px;
+    order: 3;
   }
-
 }
 
 
-/* ==============================
-   Smartphone layout
-============================== */
+/* スマートフォン対応 */
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
 
   .game-layout {
-    padding: 15px;
+    padding: 10px;
   }
 
   h1 {
@@ -598,19 +512,17 @@ footer {
   }
 
   .row {
-    gap: 4px;
+    gap: 3px;
   }
 
   .key {
-    width: min(52px, 7.5vw);
-    height: min(52px, 10vw);
-
-    font-size: 14px;
+    width: min(52px, 8cqw);
+    height: min(52px, 10cqw);
+    font-size: 12px;
   }
 
   .info {
     gap: 20px;
-
     font-size: 16px;
   }
 
@@ -620,7 +532,6 @@ footer {
 
   .typing-guide {
     width: 95%;
-
     padding: 15px;
   }
 
@@ -643,8 +554,6 @@ footer {
   .practice-table th,
   .practice-table td {
     padding: 8px;
-
     font-size: 12px;
   }
-
 }

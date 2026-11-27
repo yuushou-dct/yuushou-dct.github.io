@@ -1,650 +1,626 @@
 
-/* ==============================
-   基本設定
-============================== */
+<!DOCTYPE html>
+<html lang="ja">
 
-* {
-  box-sizing: border-box;
-}
+<head>
 
-html {
-  scroll-behavior: smooth;
-}
+  <meta charset="UTF-8">
 
-body {
-  margin: 0;
-  min-height: 100vh;
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  <meta name="google-adsense-account"
+        content="ca-pub-1666906996789320">
 
-  background: #0f0f12;
-  color: #e9eef5;
+  <title>無料タイピング練習</title>
 
-  font-family: Arial, sans-serif;
-}
+  <meta name="description"
+        content="無料でできるタイピング練習サイトです。英語のタイピングをゲーム感覚で練習できます。初心者向けの練習方法や上達のコツも紹介しています。">
 
+  <link rel="alternate" hreflang="en"
+        href="https://yuushou-dct.github.io/">
 
-/* ==============================
-   タイピング練習画面
-============================== */
+  <link rel="alternate" hreflang="ja"
+        href="https://yuushou-dct.github.io/ja/">
 
-.container {
-  width: 700px;
-  max-width: 95%;
-  min-height: 100vh;
+  <link rel="alternate" hreflang="zh-Hans"
+        href="https://yuushou-dct.github.io/zh/">
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  <link rel="alternate" hreflang="es"
+        href="https://yuushou-dct.github.io/es/">
 
-  text-align: center;
-  padding: 20px 0;
-}
+  <link rel="alternate" hreflang="fr"
+        href="https://yuushou-dct.github.io/fr/">
 
+  <link rel="alternate" hreflang="de"
+        href="https://yuushou-dct.github.io/de/">
 
-/* 言語選択 */
+  <link rel="alternate" hreflang="it"
+        href="https://yuushou-dct.github.io/it/">
 
-.language-box {
-  text-align: right;
+  <link rel="alternate" hreflang="pt"
+        href="https://yuushou-dct.github.io/pt/">
 
-  margin-top: 15px;
-  margin-bottom: 20px;
-}
+  <link rel="alternate" hreflang="x-default"
+        href="https://yuushou-dct.github.io/">
 
-#language {
-  padding: 8px 12px;
+  <link rel="stylesheet" href="hinomaru.css?v=3">
 
-  background: #202027;
-  color: #e9eef5;
+</head>
 
-  border: 1px solid #3a3a45;
-  border-radius: 6px;
 
-  font-size: 14px;
-}
+<body data-lang="ja" id="top">
 
 
-/* タイトル */
+<!-- 最初のタイピング画面 -->
 
-h1 {
-  margin-bottom: 40px;
-}
+<div class="game-layout">
 
-.description {
-  margin-top: -25px;
-  margin-bottom: 30px;
 
-  font-size: 16px;
-  line-height: 1.6;
-}
+  <!-- 左側の宣伝画像 -->
 
+  <a class="setsuna-link"
+     href="https://yuushou-dct.github.io/tai-setsuna/">
 
-/* 出題文字 */
+    <img
+      src="/setsuna-banner.webp"
+      alt="TAI-SETSUNA-瞬 無料タイピング速度ゲーム"
+      width="300"
+      height="600">
 
-#word {
-  font-size: 60px;
-  font-weight: bold;
+  </a>
 
-  letter-spacing: 0;
 
-  margin-bottom: 30px;
+  <!-- 中央のタイピング練習 -->
 
-  overflow-wrap: anywhere;
-}
+  <main class="container">
 
-#word .typed {
-  color: #28a745;
-}
+    <div class="language-box">
 
-#word .current {
-  color: #4f8cff;
-  text-decoration: underline;
-}
+      <select id="language"
+              onchange="window.location.href=this.value">
 
-#word .remaining {
-  color: #e9eef5;
-}
+        <option value="https://yuushou-dct.github.io/en/">
+          English
+        </option>
 
+        <option value="https://yuushou-dct.github.io/" selected>
+          日本語
+        </option>
 
-/* 正解・ミス */
+      </select>
 
-.info {
-  display: flex;
-  justify-content: center;
+    </div>
 
-  gap: 50px;
 
-  margin-bottom: 40px;
+    <h1>無料タイピング練習</h1>
 
-  font-size: 18px;
-}
 
+    <p class="description">
 
-/* キーボード */
+      無料でできるタイピング練習サイトです。
+      英語のタイピングをゲーム感覚で練習できます。
 
-.keyboard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    </p>
 
-  gap: 8px;
 
-  width: 100%;
-}
+    <div id="word"></div>
 
-.row {
-  display: flex;
-  justify-content: center;
 
-  gap: 8px;
-}
+    <div class="info">
 
-.key {
-  width: 52px;
-  height: 52px;
+      <span>
+        <span>正解：</span>
+        <b id="correct">0</b>
+      </span>
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+      <span>
+        <span>ミス：</span>
+        <b id="miss">0</b>
+      </span>
 
-  background: #202027;
+    </div>
 
-  border: 1px solid #3a3a45;
-  border-radius: 7px;
 
-  font-weight: bold;
+    <div class="keyboard">
 
-  transition: 0.08s;
-}
+      <div class="row">
 
-.key.active {
-  background: #4f8cff;
+        <div class="key" data-key="q">Q</div>
+        <div class="key" data-key="w">W</div>
+        <div class="key" data-key="e">E</div>
+        <div class="key" data-key="r">R</div>
+        <div class="key" data-key="t">T</div>
+        <div class="key" data-key="y">Y</div>
+        <div class="key" data-key="u">U</div>
+        <div class="key" data-key="i">I</div>
+        <div class="key" data-key="o">O</div>
+        <div class="key" data-key="p">P</div>
 
-  transform: translateY(3px);
-}
+      </div>
 
-.key.miss {
-  background: #ff5d6c;
-}
 
+      <div class="row">
 
-/* フッター */
+        <div class="key" data-key="a">A</div>
+        <div class="key" data-key="s">S</div>
+        <div class="key" data-key="d">D</div>
+        <div class="key" data-key="f">F</div>
+        <div class="key" data-key="g">G</div>
+        <div class="key" data-key="h">H</div>
+        <div class="key" data-key="j">J</div>
+        <div class="key" data-key="k">K</div>
+        <div class="key" data-key="l">L</div>
 
-footer {
-  margin-top: 5px;
+      </div>
 
-  text-align: center;
 
-  font-size: 14px;
-  line-height: 1.6;
-}
+      <div class="row">
 
+        <div class="key" data-key="z">Z</div>
+        <div class="key" data-key="x">X</div>
+        <div class="key" data-key="c">C</div>
+        <div class="key" data-key="v">V</div>
+        <div class="key" data-key="b">B</div>
+        <div class="key" data-key="n">N</div>
+        <div class="key" data-key="m">M</div>
 
-/* 解説へのリンク */
+      </div>
 
-.guide-link {
-  display: block;
+    </div>
 
-  margin: 30px auto 10px;
 
-  color: #8bb9ff;
+    <footer>
 
-  font-size: 14px;
+      yuushou-dct-corporation
 
-  text-decoration: none;
-}
+      <br>
 
-.guide-link:hover {
-  text-decoration: underline;
-}
+      Japan
 
+    </footer>
 
-/* ==============================
-   TAI-SETSUNA-瞬 宣伝画像
-============================== */
 
-.setsuna-link {
-  position: fixed;
+    <a class="guide-link" href="#typing-guide">
 
-  top: 50%;
-  left: 20px;
+      タイピング練習の使い方・上達のコツ ↓
 
-  transform: translateY(-50%);
+    </a>
 
-  display: block;
+  </main>
 
-  width: 220px;
 
-  padding: 0;
+  <!-- 右側のPayhip有料版紹介 -->
 
-  border: none;
-  border-radius: 14px;
+  <aside class="payhip-panel">
 
-  overflow: hidden;
+    <h2 id="paidTitle">
 
-  background: none;
+      有料版 TAI-SETSUNA-瞬
+      3シリーズ公開中！
 
-  box-shadow: 0 0 24px #168aff80;
+    </h2>
 
-  z-index: 30;
 
-  cursor: pointer;
-}
+    <p id="paidMessage">
 
-.setsuna-link img {
-  display: block;
+      遊んだ時間が、技術になる。
 
-  width: 100%;
-  height: auto;
-}
+    </p>
 
-.setsuna-link:hover {
-  filter: brightness(1.15);
-}
 
-.setsuna-link:focus-visible {
-  outline: 3px solid #ffcf70;
-  outline-offset: 4px;
-}
+    <a href="https://payhip.com/b/ezDcf"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="payhip-btn"
+       id="paid1">
 
+      有料版1を見る
 
-/* ==============================
-   Payhip 有料版紹介
-============================== */
+    </a>
 
-.payhip-panel {
-  position: fixed;
 
-  top: 50%;
-  right: 15px;
+    <a href="https://payhip.com/b/QFHme"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="payhip-btn"
+       id="paid2">
 
-  transform: translateY(-50%);
+      有料版2を見る
 
-  width: 220px;
-  padding: 12px;
+    </a>
 
-  background: #171820;
 
-  border: 2px solid #d4af37;
-  border-radius: 10px;
+    <a href="https://payhip.com/b/JPG1M"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="payhip-btn"
+       id="paid3">
 
-  text-align: center;
+      有料版3を見る
 
-  z-index: 10;
-}
+    </a>
 
-.payhip-panel h2 {
-  font-size: 15px;
-  line-height: 1.5;
+  </aside>
 
-  color: #ffd700;
-}
 
-.payhip-panel p {
-  font-size: 12px;
+</div>
 
-  color: #ffffff;
-}
 
-.payhip-panel a.payhip-btn {
-  display: block;
+<!-- ここから下部の解説文章 -->
 
-  width: 100%;
+<article class="typing-guide" id="typing-guide">
 
-  margin: 8px 0;
-  padding: 10px 5px;
 
-  background: #d4af37;
-  color: #111111;
+  <h2>無料タイピング練習について</h2>
 
-  font-size: 13px;
-  font-weight: bold;
+  <p>
+    当サイトは、初心者から上級者まで、
+    楽しみながらタイピング技術を向上させることを
+    目的として開発した無料タイピング練習サイトです。
+  </p>
 
-  text-decoration: none;
+  <p>
+    画面に表示された英単語を入力することで、
+    アルファベットの位置やキーボードの操作に
+    慣れることができます。
+    正解数とミス数を確認しながら、
+    自分のペースで練習を続けられます。
+  </p>
 
-  border-radius: 6px;
+  <p>
+    「遊んだ時間が、技術になる。」
+    これが当サイトの開発理念です。
+  </p>
 
-  overflow-wrap: anywhere;
-}
 
-.payhip-panel a.payhip-btn:hover {
-  background: #f1cc55;
-}
+  <h2>タイピング練習の使い方</h2>
 
+  <ol>
 
-/* ==============================
-   タイピング解説コンテンツ
-============================== */
+    <li>
+      画面に表示された英単語を確認します。
+    </li>
 
-.typing-guide {
-  width: calc(100% - 520px);
-  max-width: 1000px;
+    <li>
+      キーボードで表示された文字を入力します。
+    </li>
 
-  margin: 40px auto;
-  padding: 30px;
+    <li>
+      正解数とミス数を確認します。
+    </li>
 
-  background: #ffffff;
-  color: #333333;
+    <li>
+      正確な入力を意識して練習を続けます。
+    </li>
 
-  border: 1px solid #dddddd;
-  border-radius: 12px;
+    <li>
+      繰り返し練習して入力技術を高めましょう。
+    </li>
 
-  text-align: left;
+  </ol>
 
-  line-height: 1.9;
 
-  overflow-wrap: anywhere;
+  <h2>タイピングが速くなる練習方法</h2>
 
-  flex-shrink: 0;
-}
 
-.typing-guide h2 {
-  font-size: 24px;
+  <h3>1. 正確さを優先する</h3>
 
-  color: #174a80;
+  <p>
+    初心者は、最初から速く入力しようとする必要は
+    ありません。
+    まずは間違えずに入力することを意識しましょう。
+    正確な入力を繰り返すことで、
+    入力速度の向上につながります。
+  </p>
 
-  border-bottom: 2px solid #174a80;
 
-  padding-bottom: 10px;
+  <h3>2. ホームポジションを覚える</h3>
 
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
+  <p>
+    左手の人差し指をFキー、
+    右手の人差し指をJキーに置きます。
+    多くのキーボードには、
+    この2つのキーに小さな突起があります。
+  </p>
 
-.typing-guide h2:first-child {
-  margin-top: 0;
-}
+  <p>
+    左手の指をA・S・D・F、
+    右手の指をJ・K・L・セミコロンの位置に置き、
+    この位置を基準として指を動かします。
+    入力後はホームポジションに戻ることを
+    意識しましょう。
+  </p>
 
-.typing-guide h3 {
-  font-size: 18px;
 
-  color: #333333;
+  <h3>3. キーボードを見ない練習をする</h3>
 
-  margin-top: 25px;
-}
+  <p>
+    少しずつキーボードを見る回数を減らし、
+    画面を見ながら入力する練習をしましょう。
+    最初は時間がかかっても、
+    繰り返すことでキーの位置を覚えやすくなります。
+  </p>
 
-.typing-guide p {
-  font-size: 16px;
 
-  margin-bottom: 16px;
-}
+  <h3>4. 毎日少しずつ継続する</h3>
 
-.typing-guide ol {
-  padding-left: 25px;
-}
+  <p>
+    1日5分から10分程度でも、
+    継続して練習することが大切です。
+    長時間の練習だけに頼らず、
+    無理のない範囲で毎日の習慣にしましょう。
+  </p>
 
-.typing-guide li {
-  margin-bottom: 10px;
-}
 
+  <h2>初心者向けの練習計画</h2>
 
-/* ==============================
-   練習計画の表
-============================== */
+  <p>
+    タイピングを始めたばかりの方は、
+    次のような段階を意識して練習してみましょう。
+  </p>
 
-.table-scroll {
-  width: 100%;
 
-  overflow-x: auto;
-}
+  <div class="table-scroll">
 
-.practice-table {
-  width: 100%;
+    <table class="practice-table">
 
-  border-collapse: collapse;
+      <thead>
 
-  margin: 20px 0;
+        <tr>
+          <th>段階</th>
+          <th>練習内容</th>
+          <th>目標</th>
+        </tr>
 
-  font-size: 14px;
-}
+      </thead>
 
-.practice-table th {
-  padding: 12px;
 
-  background: #174a80;
-  color: #ffffff;
+      <tbody>
 
-  border: 1px solid #dddddd;
+        <tr>
+          <td>第1段階</td>
+          <td>キーの位置を覚える</td>
+          <td>正確な入力</td>
+        </tr>
 
-  text-align: left;
-}
+        <tr>
+          <td>第2段階</td>
+          <td>英単語を入力する</td>
+          <td>ミスを減らす</td>
+        </tr>
 
-.practice-table td {
-  padding: 12px;
+        <tr>
+          <td>第3段階</td>
+          <td>画面を見ながら入力する</td>
+          <td>キーの位置を覚える</td>
+        </tr>
 
-  border: 1px solid #dddddd;
-}
+        <tr>
+          <td>第4段階</td>
+          <td>繰り返し練習する</td>
+          <td>正確さと速度の向上</td>
+        </tr>
 
-.practice-table tbody tr:nth-child(even) {
-  background: #f1f5f9;
-}
+      </tbody>
 
+    </table>
 
-/* ==============================
-   速度計算式
-============================== */
+  </div>
 
-.formula {
-  background: #edf4ff;
 
-  border-left: 4px solid #174a80;
+  <p>
+    上達するまでの期間には個人差があります。
+    他の人と比較するのではなく、
+    昨日の自分より少しでも上達することを
+    目標にしてみましょう。
+  </p>
 
-  padding: 15px;
 
-  font-weight: bold;
-}
+  <h2>苦手なキーを克服する方法</h2>
 
+  <p>
+    タイピング練習中に間違えやすい文字があれば、
+    その文字の位置を確認しましょう。
+    特に普段あまり使用しない指で入力する文字は、
+    意識して練習することが大切です。
+  </p>
 
-/* ゲームへのリンク */
+  <p>
+    苦手な文字を含む英単語をゆっくり入力し、
+    正しい指の動きを覚えてから、
+    少しずつ入力速度を上げてみましょう。
+  </p>
 
-.game-text-link {
-  display: block;
 
-  color: #174a80;
+  <h2>タイピング練習で身につく技術</h2>
 
-  font-weight: bold;
+  <p>
+    タイピングは、パソコンを活用するための
+    基本的な技術の一つです。
+    文章作成、電子メール、事務作業、
+    プログラミングなど、
+    さまざまな場面で役立ちます。
+  </p>
 
-  margin: 20px 0;
+  <p>
+    特にプログラミングでは、
+    英字や数字、記号を正確に入力する能力が重要です。
+    タイピングに慣れることで、
+    入力操作にかかる負担を減らし、
+    学習や作業に集中しやすくなります。
+  </p>
 
-  text-decoration: underline;
-}
 
-.game-text-link:hover {
-  color: #4f8cff;
-}
+  <h2>TAI-SETSUNA-瞬について</h2>
 
+  <p>
+    TAI-SETSUNA-瞬は、
+    タイピング練習とゲームを組み合わせた
+    オリジナルのゲームシリーズです。
+  </p>
 
-/* ==============================
-   ブランドメッセージ
-============================== */
+  <p>
+    タイピングを単なる反復練習ではなく、
+    楽しみながら技術を身につける体験にすることを
+    目指して開発しています。
+  </p>
 
-.typing-message {
-  background: #10243d;
-  color: #ffd700;
 
-  padding: 25px;
+  <h3>1文字＝1メートル</h3>
 
-  margin-top: 35px;
+  <p>
+    TAI-SETSUNA-瞬の速度ゲームでは、
+    1文字を1メートルとして考え、
+    タイピングの速さを移動速度に換算する
+    独自の仕組みを採用しています。
+  </p>
 
-  border-radius: 10px;
+  <p class="formula">
 
-  text-align: center;
+    1秒間の正解文字数 × 3.6 ＝ 時速（km/h）
 
-  font-weight: bold;
-}
+  </p>
 
-.typing-message p {
-  margin: 12px 0;
-}
+  <p>
+    例えば、1秒間に5文字を正しく入力した場合、
+    時速18kmに相当します。
+    1秒間に10文字なら時速36kmです。
+    タイピングの速さを直感的に楽しむための
+    オリジナルの表現です。
+  </p>
 
+  <p>
+    速度計測を楽しみたい方は、
+    以下の無料タイピング速度ゲームも
+    ご利用ください。
+  </p>
 
-/* ページ先頭へ戻る */
 
-.back-top {
-  display: block;
+  <a class="game-text-link"
+     href="https://yuushou-dct.github.io/tai-setsuna/">
 
-  margin-top: 30px;
+    TAI-SETSUNA-瞬 無料タイピング速度ゲーム
 
-  text-align: center;
+  </a>
 
-  color: #174a80;
 
-  text-decoration: none;
-}
+  <h2>よくある質問</h2>
 
-.back-top:hover {
-  text-decoration: underline;
-}
 
+  <h3>無料で利用できますか？</h3>
 
-/* ==============================
-   サイト下部
-============================== */
+  <p>
+    はい。
+    当サイトの無料タイピング練習は、
+    無料でご利用いただけます。
+  </p>
 
-.site-footer {
-  width: 100%;
 
-  padding: 20px;
+  <h3>初心者でも利用できますか？</h3>
 
-  margin-top: 10px;
+  <p>
+    はい。
+    入力速度に自信がない方でも、
+    自分のペースで練習できます。
+    まずは正確に入力することから始めましょう。
+  </p>
 
-  color: #a0a0aa;
 
-  text-align: center;
-}
+  <h3>どのくらい練習すれば上達しますか？</h3>
 
-.site-footer p {
-  margin: 5px 0;
-}
+  <p>
+    上達するまでの期間には個人差があります。
+    毎日の練習を通じて、
+    自分の入力の正確さや速度の変化を
+    確認しましょう。
+  </p>
 
 
-/* ==============================
-   画面が狭い場合
-============================== */
+  <h3>スマートフォンでも利用できますか？</h3>
 
-@media (max-width: 1240px),
-       (max-height: 680px) {
+  <p>
+    端末やブラウザによって操作環境が異なります。
+    本格的なタイピング技術の習得には、
+    物理キーボードを備えたパソコンでの
+    練習をおすすめします。
+  </p>
 
-  .container {
-    min-height: auto;
 
-    padding: 30px 0;
-  }
+  <h3>速さと正確さのどちらが重要ですか？</h3>
 
-  .setsuna-link {
-    position: static;
+  <p>
+    初心者のうちは正確さを優先しましょう。
+    間違いを減らし、安定して入力できるようになってから、
+    少しずつ速度を上げていくことをおすすめします。
+  </p>
 
-    transform: none;
 
-    width: min(220px, 85vw);
+  <h2>運営者について</h2>
 
-    margin: 20px auto;
-  }
+  <p>
+    運営：yuushou-dct-corporation
+  </p>
 
-  .payhip-panel {
-    position: static;
+  <p>
+    当サイトは、プログラミングの学習と
+    ソフトウェア開発を通じて、
+    楽しみながら技術を身につけられる環境を
+    提供することを目指しています。
+  </p>
 
-    transform: none;
+  <p>
+    タイピングゲームシリーズ
+    「TAI-SETSUNA-瞬」の開発をはじめ、
+    日常生活に役立つ便利なアプリの制作にも
+    取り組んでいます。
+  </p>
 
-    width: 90%;
-    max-width: 400px;
 
-    margin: 20px auto;
-  }
+  <div class="typing-message">
 
-  .typing-guide {
-    width: 90%;
+    <p>一瞬、一瞬を真剣に生きよ。</p>
 
-    margin: 30px auto;
-  }
+    <p>遊んだ時間が、技術になる。</p>
 
-}
+    <p>1文字＝1メートル。</p>
 
+    <p>その一打が、君を前へ進める。</p>
 
-/* ==============================
-   スマートフォン対応
-============================== */
+  </div>
 
-@media (max-width: 768px) {
 
-  .container {
-    width: 95%;
-    min-height: auto;
+  <a class="back-top" href="#top">
 
-    padding: 15px 0;
-  }
+    ページの先頭に戻る ↑
 
-  h1 {
-    font-size: 26px;
-  }
+  </a>
 
-  .description {
-    font-size: 14px;
-  }
 
-  #word {
-    font-size: clamp(24px, 8vw, 60px);
-  }
+</article>
 
-  .keyboard {
-    width: 100%;
-  }
 
-  .row {
-    gap: 4px;
-  }
+<footer class="site-footer">
 
-  .key {
-    width: min(52px, 8vw);
-    height: min(52px, 10vw);
+  <p>yuushou-dct-corporation</p>
 
-    font-size: 14px;
-  }
+  <p>Japan</p>
 
-  .info {
-    gap: 20px;
+</footer>
 
-    font-size: 16px;
-  }
 
-  .setsuna-link {
-    width: 160px;
-  }
+<!-- JavaScript -->
 
-  .payhip-panel {
-    width: 90%;
-  }
+<script src="hinomaru.js"></script>
 
-  .typing-guide {
-    width: 95%;
 
-    padding: 15px;
-  }
+<script
+  type="module"
+  src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token":"c0261c3001bf42dbbbfe229eb3c4c244"}'>
+</script>
 
-  .typing-guide h2 {
-    font-size: 20px;
-  }
 
-  .typing-guide h3 {
-    font-size: 17px;
-  }
+</body>
 
-  .typing-guide p {
-    font-size: 15px;
-  }
-
-  .typing-message {
-    padding: 15px;
-  }
-
-  .practice-table th,
-  .practice-table td {
-    padding: 8px;
-
-    font-size: 12px;
-  }
-
-}
+</html>

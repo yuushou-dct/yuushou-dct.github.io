@@ -302,3 +302,84 @@ footer{
     overflow-wrap: anywhere;
   }
 }
+/* タイピング解説コンテンツ */
+
+.typing-guide {
+    width: 90%;
+    max-width: 1000px;
+    margin: 60px auto 30px;
+    padding: 30px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #333333;
+    border: 1px solid #dddddd;
+    border-radius: 12px;
+    text-align: left;
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+.typing-guide h2 {
+    font-size: 24px;
+    color: #174a80;
+    border-bottom: 2px solid #174a80;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.typing-guide h3 {
+    font-size: 18px;
+    color: #333333;
+    margin-top: 25px;
+}
+
+.typing-guide p {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+.typing-guide ol {
+    padding-left: 25px;
+}
+
+.typing-guide li {
+    margin-bottom: 10px;
+}
+
+.typing-message {
+    background-color: #10243d;
+    color: #ffd700;
+    padding: 25px;
+    margin-top: 35px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* スマートフォン対応 */
+
+@media screen and (max-width: 600px) {
+
+    .typing-guide {
+        width: 95%;
+        padding: 15px;
+        margin: 30px auto;
+    }
+
+    .typing-guide h2 {
+        font-size: 20px;
+    }
+
+    .typing-guide h3 {
+        font-size: 17px;
+    }
+
+    .typing-guide p {
+        font-size: 15px;
+    }
+
+    .typing-message {
+        padding: 15px;
+    }
+}
